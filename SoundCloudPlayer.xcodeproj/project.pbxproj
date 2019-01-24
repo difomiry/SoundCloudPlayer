@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C0221F9F081003CD070 /* AppDelegate.swift */; };
-		84148C0521F9F081003CD070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C0421F9F081003CD070 /* ViewController.swift */; };
-		84148C0821F9F081003CD070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84148C0621F9F081003CD070 /* Main.storyboard */; };
 		84148C0A21F9F083003CD070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84148C0921F9F083003CD070 /* Assets.xcassets */; };
 		84148C0D21F9F083003CD070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84148C0B21F9F083003CD070 /* LaunchScreen.storyboard */; };
 		84148C1821F9F083003CD070 /* SoundCloudPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C1721F9F083003CD070 /* SoundCloudPlayerTests.swift */; };
 		84148C2321F9F083003CD070 /* SoundCloudPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C2221F9F083003CD070 /* SoundCloudPlayerUITests.swift */; };
+		84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C3521F9FD73003CD070 /* TrackViewController.swift */; };
+		84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3621F9FD73003CD070 /* TrackViewController.xib */; };
+		84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C3921F9FDA4003CD070 /* SearchViewController.swift */; };
+		84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3A21F9FDA5003CD070 /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,6 @@
 /* Begin PBXFileReference section */
 		84148BFF21F9F081003CD070 /* SoundCloudPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148C0221F9F081003CD070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84148C0421F9F081003CD070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84148C0721F9F081003CD070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84148C0921F9F083003CD070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84148C0C21F9F083003CD070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84148C0E21F9F083003CD070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,10 @@
 		84148C1E21F9F083003CD070 /* SoundCloudPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148C2221F9F083003CD070 /* SoundCloudPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudPlayerUITests.swift; sourceTree = "<group>"; };
 		84148C2421F9F083003CD070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84148C3521F9FD73003CD070 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		84148C3621F9FD73003CD070 /* TrackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackViewController.xib; sourceTree = "<group>"; };
+		84148C3921F9FDA4003CD070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		84148C3A21F9FDA5003CD070 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				84148C0921F9F083003CD070 /* Assets.xcassets */,
-				84148C0621F9F081003CD070 /* Main.storyboard */,
 				84148C0B21F9F083003CD070 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -135,10 +138,37 @@
 		84148C3121F9F848003CD070 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				84148C3221F9FD3E003CD070 /* Scenes */,
 				84148C0221F9F081003CD070 /* AppDelegate.swift */,
-				84148C0421F9F081003CD070 /* ViewController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		84148C3221F9FD3E003CD070 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				84148C3421F9FD54003CD070 /* Track */,
+				84148C3321F9FD4E003CD070 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		84148C3321F9FD4E003CD070 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				84148C3921F9FDA4003CD070 /* SearchViewController.swift */,
+				84148C3A21F9FDA5003CD070 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		84148C3421F9FD54003CD070 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				84148C3521F9FD73003CD070 /* TrackViewController.swift */,
+				84148C3621F9FD73003CD070 /* TrackViewController.xib */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */,
 				84148C0D21F9F083003CD070 /* LaunchScreen.storyboard in Resources */,
 				84148C0A21F9F083003CD070 /* Assets.xcassets in Resources */,
-				84148C0821F9F081003CD070 /* Main.storyboard in Resources */,
+				84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84148C0521F9F081003CD070 /* ViewController.swift in Sources */,
+				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
+				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		84148C0621F9F081003CD070 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84148C0721F9F081003CD070 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84148C0B21F9F083003CD070 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
