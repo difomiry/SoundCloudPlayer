@@ -28,7 +28,7 @@ extension Bindable where Self: NSObject {
     }
   }
 
-  func bind(with observable: Observable<BindingType>) {
+  func bind(to observable: Observable<BindingType>) {
 
     (self as? UIControl)?.addTarget(self, action: Selector { [weak self] in self?.valueChanged() }, for: [.editingChanged, .valueChanged])
 

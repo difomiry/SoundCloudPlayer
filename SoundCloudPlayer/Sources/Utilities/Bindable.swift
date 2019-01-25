@@ -7,6 +7,6 @@ protocol Bindable: NSObjectProtocol {
 
   var observingValue: BindingType? { get set }
 
-  func bind(with observable: Observable<BindingType>)
+  func bind(to observable: Observable<BindingType>)
 
 }

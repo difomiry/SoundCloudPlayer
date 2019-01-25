@@ -19,7 +19,7 @@ class Observable<ObservedType> {
     self.value = value
   }
 
-  func bind(_ observer: @escaping Observer) {
+  func bind(to observer: @escaping Observer) {
     observers.append(observer)
   }
 
