@@ -16,6 +16,8 @@
 		84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3621F9FD73003CD070 /* TrackViewController.xib */; };
 		84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C3921F9FDA4003CD070 /* SearchViewController.swift */; };
 		84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3A21F9FDA5003CD070 /* SearchViewController.xib */; };
+		84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 84148C5021FB7707003CD070 /* BlockBasedSelector.m */; };
+		84148C5321FB7738003CD070 /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C5221FB7738003CD070 /* BlockBasedSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		84148C3621F9FD73003CD070 /* TrackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackViewController.xib; sourceTree = "<group>"; };
 		84148C3921F9FDA4003CD070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		84148C3A21F9FDA5003CD070 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		84148C4E21FB76DA003CD070 /* BlockBasedSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
+		84148C5021FB7707003CD070 /* BlockBasedSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
+		84148C5221FB7738003CD070 /* BlockBasedSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBasedSelector.swift; sourceTree = "<group>"; };
+		84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundCloudPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +144,10 @@
 		84148C3121F9F848003CD070 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				84148C4921FB68A8003CD070 /* Utilities */,
 				84148C3221F9FD3E003CD070 /* Scenes */,
 				84148C0221F9F081003CD070 /* AppDelegate.swift */,
+				84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -169,6 +177,24 @@
 				84148C3621F9FD73003CD070 /* TrackViewController.xib */,
 			);
 			path = Track;
+			sourceTree = "<group>";
+		};
+		84148C4921FB68A8003CD070 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				84148C4D21FB76BF003CD070 /* BlockBasedSelector */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		84148C4D21FB76BF003CD070 /* BlockBasedSelector */ = {
+			isa = PBXGroup;
+			children = (
+				84148C4E21FB76DA003CD070 /* BlockBasedSelector.h */,
+				84148C5021FB7707003CD070 /* BlockBasedSelector.m */,
+				84148C5221FB7738003CD070 /* BlockBasedSelector.swift */,
+			);
+			path = BlockBasedSelector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,8 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
+				84148C5321FB7738003CD070 /* BlockBasedSelector.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +437,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -463,6 +492,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
