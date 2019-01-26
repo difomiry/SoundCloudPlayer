@@ -15,3 +15,11 @@ extension UISearchBar: Bindable {
   }
 
 }
+
+extension UISearchBar: UISearchBarDelegate {
+
+  public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    valueChanged()
+  }
+
+}

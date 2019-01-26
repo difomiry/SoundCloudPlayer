@@ -21,7 +21,7 @@ extension Bindable where Self: NSObject {
     }
   }
 
-  private func valueChanged() {
+  func valueChanged() {
     if binder.value != observingValue {
       binder.value = observingValue
     }
@@ -30,6 +30,10 @@ extension Bindable where Self: NSObject {
   func bind(to observable: Observable<BindingType>) {
 
     (self as? UIControl)?.addTarget(self, action: Selector { [weak self] in self?.valueChanged() }, for: [.editingChanged, .valueChanged])
+
+    if let searchBar = self as? UISearchBar {
+      searchBar.delegate = searchBar
+    }
 
     binder = observable
 
