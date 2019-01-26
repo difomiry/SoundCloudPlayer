@@ -31,9 +31,9 @@
 		84148C7A21FBA548003CD070 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7921FBA548003CD070 /* Result.swift */; };
 		84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */; };
 		84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */; };
-		84148C8021FBA957003CD070 /* URLSession+HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7F21FBA957003CD070 /* URLSession+HTTPRequest.swift */; };
 		84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */; };
 		84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8521FBD43E003CD070 /* HTTPError.swift */; };
+		84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8721FBE383003CD070 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +86,9 @@
 		84148C7921FBA548003CD070 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestType.swift; sourceTree = "<group>"; };
-		84148C7F21FBA957003CD070 /* URLSession+HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+HTTPRequest.swift"; sourceTree = "<group>"; };
 		84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestParameters.swift; sourceTree = "<group>"; };
 		84148C8521FBD43E003CD070 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		84148C8721FBE383003CD070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +224,7 @@
 				84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */,
 				84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */,
 				84148C8521FBD43E003CD070 /* HTTPError.swift */,
+				84148C8721FBE383003CD070 /* HTTPClient.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -248,7 +249,6 @@
 				84148C6D21FB8148003CD070 /* UISlider+Bindable.swift */,
 				84148C6F21FB856C003CD070 /* UISegmentedControl+Bindable.swift */,
 				84148C7121FB85C7003CD070 /* UISearchBar+Bindable.swift */,
-				84148C7F21FBA957003CD070 /* URLSession+HTTPRequest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,9 +396,9 @@
 				84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C7021FB856C003CD070 /* UISegmentedControl+Bindable.swift in Sources */,
-				84148C8021FBA957003CD070 /* URLSession+HTTPRequest.swift in Sources */,
 				84148C6121FB7D72003CD070 /* Bindable.swift in Sources */,
 				84148C7221FB85C7003CD070 /* UISearchBar+Bindable.swift in Sources */,
+				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C6E21FB8148003CD070 /* UISlider+Bindable.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,

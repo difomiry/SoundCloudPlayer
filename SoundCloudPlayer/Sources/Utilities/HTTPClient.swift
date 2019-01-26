@@ -1,7 +1,13 @@
 
-extension URLSession {
+class HTTPClient<RequestType: HTTPRequestType> {
 
-  func task<ValueType: Decodable>(with request: HTTPRequestType, decoder: JSONDecoder, completion: @escaping (Result<ValueType>) -> Void) {
+  let session: URLSession
+
+  init(session: URLSession = URLSession.shared) {
+    self.session = session
+  }
+
+  func task<ValueType: Decodable>(with request: RequestType, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<ValueType>) -> Void) {
 
     let urlRequest: URLRequest
 
@@ -11,7 +17,7 @@ extension URLSession {
       return completion(.failure(error))
     }
 
-    dataTask(with: urlRequest) { data, _, error in
+    session.dataTask(with: urlRequest) { data, _, error in
 
       let result: Result<ValueType>
 
@@ -33,7 +39,7 @@ extension URLSession {
       case (.none, .none), (.some, .some):
         result = .failure(HTTPError.invalidResponse)
       }
-    }.resume()
+      }.resume()
   }
 
   private func prepare(request: HTTPRequestType) throws -> URLRequest {
