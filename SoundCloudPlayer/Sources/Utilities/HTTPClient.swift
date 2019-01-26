@@ -42,7 +42,7 @@ class HTTPClient<RequestType: HTTPRequestType> {
       }.resume()
   }
 
-  private func prepare(request: HTTPRequestType) throws -> URLRequest {
+  private func prepare(request: RequestType) throws -> URLRequest {
 
     var urlRequest = URLRequest(url: request.url)
 
