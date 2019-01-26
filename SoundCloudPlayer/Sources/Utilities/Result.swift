@@ -1,6 +1,4 @@
 
-import Foundation
-
 enum Result<ValueType> {
   case success(ValueType)
   case failure(Error)

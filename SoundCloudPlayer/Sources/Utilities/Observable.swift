@@ -1,6 +1,4 @@
 
-import Foundation
-
 class Observable<ObservedType> {
 
   typealias Observer = (_ observable: Observable<ObservedType>, ObservedType) -> Void

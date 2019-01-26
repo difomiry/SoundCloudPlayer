@@ -1,6 +1,4 @@
 
-import Foundation
-
 protocol Bindable: NSObjectProtocol {
 
   associatedtype BindingType: Equatable
