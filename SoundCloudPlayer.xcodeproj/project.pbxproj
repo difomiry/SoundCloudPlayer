@@ -35,6 +35,7 @@
 		84148C8E21FDD0F3003CD070 /* BindableUISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */; };
 		84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */; };
 		84148C9321FDDBCD003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudService.swift */; };
+		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableUISearchBar.swift; sourceTree = "<group>"; };
 		84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableUISearchBar+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		84148C9221FDDBCD003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
+		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				84148C6421FB7DAD003CD070 /* Extensions */,
 				84148C4921FB68A8003CD070 /* Utilities */,
 				84148C3221F9FD3E003CD070 /* Scenes */,
+				84148C9421FDDEB7003CD070 /* AppConstants.swift */,
 				84148C0221F9F081003CD070 /* AppDelegate.swift */,
 				84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */,
 			);
@@ -408,6 +411,7 @@
 				84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C7021FB856C003CD070 /* UISegmentedControl+Bindable.swift in Sources */,
+				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				84148C6121FB7D72003CD070 /* Bindable.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C6E21FB8148003CD070 /* UISlider+Bindable.swift in Sources */,

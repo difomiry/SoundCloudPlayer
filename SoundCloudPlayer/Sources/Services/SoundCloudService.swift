@@ -9,7 +9,7 @@ enum SoundCloudService {
 extension SoundCloudService: HTTPRequestType {
   
   var baseURL: URL {
-    return URL(string: "https://api.soundcloud.com/")!
+    return URL(string: AppConstants.soundCloudApiPath)!
   }
 
   var path: String {
@@ -23,11 +23,11 @@ extension SoundCloudService: HTTPRequestType {
 
   var parameters: HTTPRequestParameters? {
 
-    var parameters = ["client_id": "xkpqYPmDf6KG7aL1xM4qfWaJQrHBLSOh"]
+    var parameters = ["client_id": AppConstants.soundCloudApiKey]
 
     switch self {
     case let .search(query):
-      parameters["limit"] = "50"
+      parameters["limit"] = String(AppConstants.soundCloudApiSearchLimit)
       parameters["q"] = query
     default:
       break
