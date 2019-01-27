@@ -2,6 +2,7 @@
 enum SoundCloudService {
 
   case track(Int)
+  case stream(Int)
   case search(String)
 
 }
@@ -16,6 +17,8 @@ extension SoundCloudService: HTTPRequestType {
     switch self {
     case let .track(id):
       return "tracks/\(id)"
+    case let .stream(id):
+      return "tracks/\(id)/stream"
     case .search:
       return "tracks"
     }
