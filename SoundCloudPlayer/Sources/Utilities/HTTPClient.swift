@@ -39,7 +39,7 @@ class HTTPClient<RequestType: HTTPRequestType> {
       case (.none, .none), (.some, .some):
         result = .failure(HTTPError.invalidResponse)
       }
-      }.resume()
+    }.resume()
   }
 
   func prepareUrl(from request: RequestType) throws -> URL {
