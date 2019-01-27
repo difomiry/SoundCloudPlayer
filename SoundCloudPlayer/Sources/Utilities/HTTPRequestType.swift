@@ -11,6 +11,10 @@ protocol HTTPRequestType {
 
 extension HTTPRequestType {
 
+  var method: HTTPMethod {
+    return .get
+  }
+
   var headers: [String: String]? {
     return nil
   }
