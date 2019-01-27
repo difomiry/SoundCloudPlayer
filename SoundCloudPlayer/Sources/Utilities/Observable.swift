@@ -1,14 +1,14 @@
 
 class Observable<ObservedType> {
 
-  typealias Observer = (_ observable: Observable<ObservedType>, ObservedType) -> Void
+  typealias Observer = (Observable<ObservedType>, ObservedType) -> Void
 
   private var observers = [Observer]()
 
   var value: ObservedType? {
     didSet {
       if let value = value {
-        notify(value)
+        observers.forEach { observer in observer(self, value) }
       }
     }
   }
@@ -19,12 +19,6 @@ class Observable<ObservedType> {
 
   func bind(to observer: @escaping Observer) {
     observers.append(observer)
-  }
-
-  private func notify(_ value: ObservedType) {
-    observers.forEach { [unowned self] observer in
-      observer(self, value)
-    }
   }
 
 }

@@ -7,35 +7,37 @@ fileprivate struct AssociatedKeys {
 
 extension Bindable where Self: NSObject {
 
-  private var binder: Observable<BindingType> {
+  private var binder: Observable<BindingType>? {
     get {
-      guard let value = objc_getAssociatedObject(self, &AssociatedKeys.binder) as? Observable<BindingType> else {
-        let newValue = Observable<BindingType>()
-        objc_setAssociatedObject(self, &AssociatedKeys.binder, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        return newValue
-      }
-      return value
+      return objc_getAssociatedObject(self, &AssociatedKeys.binder) as? Observable<BindingType>
     }
-    set(newValue) {
-      objc_setAssociatedObject(self, &AssociatedKeys.binder, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    set {
+      if let newValue = newValue {
+        objc_setAssociatedObject(self, &AssociatedKeys.binder, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+      }
     }
   }
 
-  func valueChanged() {
-    if binder.value != observingValue {
+  func observe(for observable: Observable<BindingType>, with handler: @escaping (BindingType) -> Void) {
+
+    binder = observable
+
+    observable.bind { _, value  in
+      DispatchQueue.main.async {
+        handler(value)
+      }
+    }
+  }
+
+  func notifyValueChanged() {
+    if let binder = binder, binder.value != observingValue {
       binder.value = observingValue
     }
   }
 
   func bind(to observable: Observable<BindingType>) {
 
-    (self as? UIControl)?.addTarget(self, action: Selector { [weak self] in self?.valueChanged() }, for: [.editingChanged, .valueChanged])
-
-    if let searchBar = self as? UISearchBar {
-      searchBar.delegate = searchBar
-    }
-
-    binder = observable
+    (self as? UIControl)?.addTarget(Selector, action: Selector { [weak self] in self?.notifyValueChanged() }, for: [.editingChanged, .valueChanged])
 
     if let value = observable.value {
       self.observingValue = value
