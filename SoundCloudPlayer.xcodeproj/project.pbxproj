@@ -37,6 +37,7 @@
 		84148C9321FDDBCD003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudService.swift */; };
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 		84148C9D21FDFE93003CD070 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9C21FDFE93003CD070 /* Debouncer.swift */; };
+		84148C9F21FE04A5003CD070 /* ObservableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9E21FE04A5003CD070 /* ObservableArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		84148C9221FDDBCD003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84148C9C21FDFE93003CD070 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		84148C9E21FE04A5003CD070 /* ObservableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				84148C4D21FB76BF003CD070 /* BlockBasedSelector */,
 				84148C6021FB7D72003CD070 /* Bindable.swift */,
 				84148C6221FB7D83003CD070 /* Observable.swift */,
+				84148C9E21FE04A5003CD070 /* ObservableArray.swift */,
 				84148C7921FBA548003CD070 /* Result.swift */,
 				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
 				84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */,
@@ -433,6 +436,7 @@
 				84148C6A21FB8065003CD070 /* UILabel+Bindable.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */,
 				84148C6621FB7DC3003CD070 /* NSObject+Bindable.swift in Sources */,
+				84148C9F21FE04A5003CD070 /* ObservableArray.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
