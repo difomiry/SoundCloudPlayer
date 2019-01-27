@@ -36,6 +36,7 @@
 		84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */; };
 		84148C9321FDDBCD003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudService.swift */; };
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
+		84148C9D21FDFE93003CD070 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9C21FDFE93003CD070 /* Debouncer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableUISearchBar+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		84148C9221FDDBCD003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		84148C9C21FDFE93003CD070 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				84148C8521FBD43E003CD070 /* HTTPError.swift */,
 				84148C8721FBE383003CD070 /* HTTPClient.swift */,
 				84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */,
+				84148C9C21FDFE93003CD070 /* Debouncer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			files = (
 				84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */,
 				84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */,
+				84148C9D21FDFE93003CD070 /* Debouncer.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C7021FB856C003CD070 /* UISegmentedControl+Bindable.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
