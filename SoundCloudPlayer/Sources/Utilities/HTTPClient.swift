@@ -12,7 +12,7 @@ class HTTPClient<RequestType: HTTPRequestType> {
     let urlRequest: URLRequest
 
     do {
-      urlRequest = try prepare(request: request)
+      urlRequest = try prepareUrlRequest(from: request)
     } catch {
       return completion(.failure(error))
     }
@@ -42,33 +42,48 @@ class HTTPClient<RequestType: HTTPRequestType> {
       }.resume()
   }
 
-  private func prepare(request: RequestType) throws -> URLRequest {
+  func prepareUrl(from request: RequestType) throws -> URL {
 
-    var urlRequest = URLRequest(url: request.url)
+    guard var urlComponents = URLComponents(url: request.url, resolvingAgainstBaseURL: true) else {
+      throw HTTPError.invalidRequest
+    }
 
     if let parameters = request.parameters {
       switch parameters {
       case let .url(parameters):
-
-        var urlComponents = URLComponents()
-
         urlComponents.queryItems = parameters.map { (key, value) -> URLQueryItem in
           return URLQueryItem(name: key, value: value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         }
+      default:
+        break
+      }
+    }
 
-        guard let url = urlComponents.url(relativeTo: request.url) else {
-          throw HTTPError.invalidRequest
-        }
+    guard let url = urlComponents.url else {
+      throw HTTPError.invalidRequest
+    }
 
-        urlRequest.url = url
+    return url
+  }
+
+  func prepareUrlRequest(from request: RequestType) throws -> URLRequest {
+
+    var urlRequest = URLRequest(url: try prepareUrl(from: request))
+
+    if let parameters = request.parameters {
+      switch parameters {
       case let .body(parameters):
         do {
           urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .init(rawValue: 0))
         } catch {
           throw HTTPError.invalidRequest
         }
+      default:
+        break
       }
     }
+
+    urlRequest.httpMethod = request.method.rawValue
 
     return urlRequest
   }
