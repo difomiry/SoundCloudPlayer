@@ -34,6 +34,7 @@
 		84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8721FBE383003CD070 /* HTTPClient.swift */; };
 		84148C8E21FDD0F3003CD070 /* BindableUISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */; };
 		84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */; };
+		84148C9321FDDBCD003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		84148C8721FBE383003CD070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableUISearchBar.swift; sourceTree = "<group>"; };
 		84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableUISearchBar+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		84148C9221FDDBCD003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		84148C3121F9F848003CD070 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				84148C9121FDDBA5003CD070 /* Services */,
 				84148C7621FB9CB2003CD070 /* Models */,
 				84148C6421FB7DAD003CD070 /* Extensions */,
 				84148C4921FB68A8003CD070 /* Utilities */,
@@ -259,6 +262,14 @@
 				84148C7721FB9CEF003CD070 /* Track.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		84148C9121FDDBA5003CD070 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84148C9221FDDBCD003CD070 /* SoundCloudService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +421,7 @@
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
 				84148C8E21FDD0F3003CD070 /* BindableUISearchBar.swift in Sources */,
 				84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */,
+				84148C9321FDDBCD003CD070 /* SoundCloudService.swift in Sources */,
 				84148C6A21FB8065003CD070 /* UILabel+Bindable.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */,
 				84148C6621FB7DC3003CD070 /* NSObject+Bindable.swift in Sources */,
