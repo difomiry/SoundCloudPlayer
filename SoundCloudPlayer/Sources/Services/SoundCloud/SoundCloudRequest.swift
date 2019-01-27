@@ -1,5 +1,5 @@
 
-enum SoundCloudService {
+enum SoundCloudRequest {
 
   case track(Int)
   case stream(Int)
@@ -7,7 +7,7 @@ enum SoundCloudService {
 
 }
 
-extension SoundCloudService: HTTPRequestType {
+extension SoundCloudRequest: HTTPRequestType {
   
   var baseURL: URL {
     return URL(string: AppConstants.soundCloudApiPath)!
