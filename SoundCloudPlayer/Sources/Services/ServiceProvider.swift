@@ -1,7 +1,8 @@
 
-final class ServiceProvider {
+protocol ServiceProviderType {
+  var soundCloudService: SoundCloudServiceType { get }
+}
 
-  private(set) lazy var httpClient = HTTPClient<SoundCloudRequest>()
-  private(set) lazy var soundCloudService = SoundCloudService(provider: self)
-
+final class ServiceProvider: ServiceProviderType {
+  private(set) lazy var soundCloudService: SoundCloudServiceType = SoundCloudService(provider: self)
 }

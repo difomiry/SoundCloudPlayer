@@ -1,5 +1,15 @@
 
-class HTTPClient<RequestType: HTTPRequestType> {
+protocol HTTPClientType {
+
+  associatedtype RequestType: HTTPRequestType
+
+  func task<ValueType: Decodable>(with request: RequestType, decoder: JSONDecoder, completion: @escaping (Result<ValueType>) -> Void)
+  func prepareUrl(from request: RequestType) throws -> URL
+  func prepareUrlRequest(from request: RequestType) throws -> URLRequest
+
+}
+
+class HTTPClient<RequestType: HTTPRequestType>: HTTPClientType {
 
   let session: URLSession
 

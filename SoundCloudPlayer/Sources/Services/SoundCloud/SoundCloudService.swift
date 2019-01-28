@@ -1,18 +1,26 @@
 
-final class SoundCloudService {
+protocol SoundCloudServiceType {
 
-  private let httpClient: HTTPClient<SoundCloudRequest>
+  func search(query: String, completion: @escaping (Result<[Track]>) -> Void)
+  func fetchTrack(id: Int, completion: @escaping (Result<Track>) -> Void)
+  func fetchStreamUrl(id: Int, completion: @escaping (Result<URL>) -> Void)
 
-  init(provider: ServiceProvider) {
-    httpClient = provider.httpClient
+}
+
+final class SoundCloudService: HTTPClient<SoundCloudRequest>, SoundCloudServiceType {
+
+  private let provider: ServiceProviderType
+
+  init(provider: ServiceProviderType) {
+    self.provider = provider
   }
 
   func search(query: String, completion: @escaping (Result<[Track]>) -> Void) {
-    httpClient.task(with: .search(query), completion: completion)
+    task(with: .search(query), completion: completion)
   }
 
   func fetchTrack(id: Int, completion: @escaping (Result<Track>) -> Void) {
-    httpClient.task(with: .track(id), completion: completion)
+    task(with: .track(id), completion: completion)
   }
 
   func fetchStreamUrl(id: Int, completion: @escaping (Result<URL>) -> Void) {
@@ -26,7 +34,7 @@ final class SoundCloudService {
     }
 
     do {
-      result = .success(try httpClient.prepareUrl(from: .stream(id)))
+      result = .success(try prepareUrl(from: .stream(id)))
     } catch {
       result = .failure(error)
     }
