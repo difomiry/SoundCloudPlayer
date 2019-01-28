@@ -16,15 +16,6 @@
 		84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3621F9FD73003CD070 /* TrackViewController.xib */; };
 		84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C3921F9FDA4003CD070 /* SearchViewController.swift */; };
 		84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3A21F9FDA5003CD070 /* SearchViewController.xib */; };
-		84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 84148C5021FB7707003CD070 /* BlockBasedSelector.m */; };
-		84148C5321FB7738003CD070 /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C5221FB7738003CD070 /* BlockBasedSelector.swift */; };
-		84148C6121FB7D72003CD070 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6021FB7D72003CD070 /* Bindable.swift */; };
-		84148C6321FB7D83003CD070 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6221FB7D83003CD070 /* Observable.swift */; };
-		84148C6621FB7DC3003CD070 /* NSObject+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6521FB7DC3003CD070 /* NSObject+Bindable.swift */; };
-		84148C6A21FB8065003CD070 /* UILabel+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6921FB8065003CD070 /* UILabel+Bindable.swift */; };
-		84148C6C21FB80D6003CD070 /* UISwitch+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6B21FB80D6003CD070 /* UISwitch+Bindable.swift */; };
-		84148C6E21FB8148003CD070 /* UISlider+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6D21FB8148003CD070 /* UISlider+Bindable.swift */; };
-		84148C7021FB856C003CD070 /* UISegmentedControl+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C6F21FB856C003CD070 /* UISegmentedControl+Bindable.swift */; };
 		84148C7821FB9CEF003CD070 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7721FB9CEF003CD070 /* Track.swift */; };
 		84148C7A21FBA548003CD070 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7921FBA548003CD070 /* Result.swift */; };
 		84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */; };
@@ -32,14 +23,14 @@
 		84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */; };
 		84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8521FBD43E003CD070 /* HTTPError.swift */; };
 		84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8721FBE383003CD070 /* HTTPClient.swift */; };
-		84148C8E21FDD0F3003CD070 /* BindableUISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */; };
-		84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */; };
 		84148C9321FDDBCD003CD070 /* SoundCloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudRequest.swift */; };
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
-		84148C9D21FDFE93003CD070 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9C21FDFE93003CD070 /* Debouncer.swift */; };
-		84148C9F21FE04A5003CD070 /* ObservableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9E21FE04A5003CD070 /* ObservableArray.swift */; };
 		84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA121FE1271003CD070 /* SoundCloudService.swift */; };
 		84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA521FE19B8003CD070 /* ServiceProvider.swift */; };
+		844EB4B621FF286B003F6CBE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; };
+		844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; };
+		844EB4BB21FF2884003F6CBE /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +50,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		844EB4B821FF286B003F6CBE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				844EB4BB21FF2884003F6CBE /* RxCocoa.framework in Embed Frameworks */,
+				844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		84148BFF21F9F081003CD070 /* SoundCloudPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148C0221F9F081003CD070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,17 +81,7 @@
 		84148C3621F9FD73003CD070 /* TrackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackViewController.xib; sourceTree = "<group>"; };
 		84148C3921F9FDA4003CD070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		84148C3A21F9FDA5003CD070 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		84148C4E21FB76DA003CD070 /* BlockBasedSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
-		84148C5021FB7707003CD070 /* BlockBasedSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
-		84148C5221FB7738003CD070 /* BlockBasedSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBasedSelector.swift; sourceTree = "<group>"; };
 		84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundCloudPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
-		84148C6021FB7D72003CD070 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		84148C6221FB7D83003CD070 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		84148C6521FB7DC3003CD070 /* NSObject+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Bindable.swift"; sourceTree = "<group>"; };
-		84148C6921FB8065003CD070 /* UILabel+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Bindable.swift"; sourceTree = "<group>"; };
-		84148C6B21FB80D6003CD070 /* UISwitch+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Bindable.swift"; sourceTree = "<group>"; };
-		84148C6D21FB8148003CD070 /* UISlider+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Bindable.swift"; sourceTree = "<group>"; };
-		84148C6F21FB856C003CD070 /* UISegmentedControl+Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Bindable.swift"; sourceTree = "<group>"; };
 		84148C7721FB9CEF003CD070 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		84148C7921FBA548003CD070 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -93,14 +89,12 @@
 		84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestParameters.swift; sourceTree = "<group>"; };
 		84148C8521FBD43E003CD070 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		84148C8721FBE383003CD070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableUISearchBar.swift; sourceTree = "<group>"; };
-		84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableUISearchBar+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		84148C9221FDDBCD003CD070 /* SoundCloudRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudRequest.swift; sourceTree = "<group>"; };
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		84148C9C21FDFE93003CD070 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
-		84148C9E21FE04A5003CD070 /* ObservableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableArray.swift; sourceTree = "<group>"; };
 		84148CA121FE1271003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148CA521FE19B8003CD070 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		844EB4B521FF286B003F6CBE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		844EB4B921FF2884003F6CBE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */,
+				844EB4B621FF286B003F6CBE /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +127,8 @@
 		84148BF621F9F081003CD070 = {
 			isa = PBXGroup;
 			children = (
+				844EB4B921FF2884003F6CBE /* RxCocoa.framework */,
+				844EB4B521FF286B003F6CBE /* RxSwift.framework */,
 				84148C0121F9F081003CD070 /* SoundCloudPlayer */,
 				84148C1621F9F083003CD070 /* SoundCloudPlayerTests */,
 				84148C2121F9F083003CD070 /* SoundCloudPlayerUITests */,
@@ -190,7 +188,6 @@
 			children = (
 				84148C9121FDDBA5003CD070 /* Services */,
 				84148C7621FB9CB2003CD070 /* Models */,
-				84148C6421FB7DAD003CD070 /* Extensions */,
 				84148C4921FB68A8003CD070 /* Utilities */,
 				84148C3221F9FD3E003CD070 /* Scenes */,
 				84148C9421FDDEB7003CD070 /* AppConstants.swift */,
@@ -230,43 +227,14 @@
 		84148C4921FB68A8003CD070 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				84148C4D21FB76BF003CD070 /* BlockBasedSelector */,
-				84148C6021FB7D72003CD070 /* Bindable.swift */,
-				84148C6221FB7D83003CD070 /* Observable.swift */,
-				84148C9E21FE04A5003CD070 /* ObservableArray.swift */,
-				84148C7921FBA548003CD070 /* Result.swift */,
-				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
-				84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */,
-				84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */,
-				84148C8521FBD43E003CD070 /* HTTPError.swift */,
 				84148C8721FBE383003CD070 /* HTTPClient.swift */,
-				84148C8D21FDD0F3003CD070 /* BindableUISearchBar.swift */,
-				84148C9C21FDFE93003CD070 /* Debouncer.swift */,
+				84148C8521FBD43E003CD070 /* HTTPError.swift */,
+				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
+				84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */,
+				84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */,
+				84148C7921FBA548003CD070 /* Result.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		84148C4D21FB76BF003CD070 /* BlockBasedSelector */ = {
-			isa = PBXGroup;
-			children = (
-				84148C4E21FB76DA003CD070 /* BlockBasedSelector.h */,
-				84148C5021FB7707003CD070 /* BlockBasedSelector.m */,
-				84148C5221FB7738003CD070 /* BlockBasedSelector.swift */,
-			);
-			path = BlockBasedSelector;
-			sourceTree = "<group>";
-		};
-		84148C6421FB7DAD003CD070 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				84148C6521FB7DC3003CD070 /* NSObject+Bindable.swift */,
-				84148C6921FB8065003CD070 /* UILabel+Bindable.swift */,
-				84148C6B21FB80D6003CD070 /* UISwitch+Bindable.swift */,
-				84148C6D21FB8148003CD070 /* UISlider+Bindable.swift */,
-				84148C6F21FB856C003CD070 /* UISegmentedControl+Bindable.swift */,
-				84148C8F21FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		84148C7621FB9CB2003CD070 /* Models */ = {
@@ -305,6 +273,7 @@
 				84148BFB21F9F081003CD070 /* Sources */,
 				84148BFC21F9F081003CD070 /* Frameworks */,
 				84148BFD21F9F081003CD070 /* Resources */,
+				844EB4B821FF286B003F6CBE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,32 +396,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84148C9021FDD229003CD070 /* BindableUISearchBar+UISearchBarDelegate.swift in Sources */,
-				84148C5121FB7707003CD070 /* BlockBasedSelector.m in Sources */,
-				84148C9D21FDFE93003CD070 /* Debouncer.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
-				84148C7021FB856C003CD070 /* UISegmentedControl+Bindable.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
-				84148C6121FB7D72003CD070 /* Bindable.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
-				84148C6E21FB8148003CD070 /* UISlider+Bindable.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
-				84148C6321FB7D83003CD070 /* Observable.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
-				84148C6C21FB80D6003CD070 /* UISwitch+Bindable.swift in Sources */,
-				84148C5321FB7738003CD070 /* BlockBasedSelector.swift in Sources */,
 				84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
-				84148C8E21FDD0F3003CD070 /* BindableUISearchBar.swift in Sources */,
 				84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */,
 				84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */,
 				84148C9321FDDBCD003CD070 /* SoundCloudRequest.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */,
-				84148C6A21FB8065003CD070 /* UILabel+Bindable.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */,
-				84148C6621FB7DC3003CD070 /* NSObject+Bindable.swift in Sources */,
-				84148C9F21FE04A5003CD070 /* ObservableArray.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +579,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SoundCloudPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -630,6 +590,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.difomiry.SoundCloudPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -640,6 +602,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SoundCloudPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,6 +613,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.difomiry.SoundCloudPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
