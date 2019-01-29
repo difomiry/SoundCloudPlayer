@@ -18,7 +18,7 @@ final class SearchViewModel: SearchViewModelType {
   /// Emits an array of fetched tracks.
   private(set) var tracks: Observable<[Track]>
 
-  init(provider: ServiceProviderType) {
+  init(soundCloudService: SoundCloudServiceType) {
 
     let _query = BehaviorSubject<String>(value: "")
     query = _query.asObserver()
@@ -27,7 +27,7 @@ final class SearchViewModel: SearchViewModelType {
       .throttle(2.0, scheduler: MainScheduler.instance)
       .distinctUntilChanged()
       .filter { query in !query.isEmpty }
-      .flatMapLatest { query in provider.soundCloudService.search(query: query).catchErrorJustReturn([]) }
+      .flatMapLatest { query in soundCloudService.search(query: query).catchErrorJustReturn([]) }
       .observeOn(MainScheduler.instance)
   }
 
