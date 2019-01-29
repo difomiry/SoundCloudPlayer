@@ -31,6 +31,9 @@
 		844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; };
 		844EB4BB21FF2884003F6CBE /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* TrackCell.swift */; };
+		844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* TrackCell.xib */; };
+		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		84148CA521FE19B8003CD070 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		844EB4B521FF286B003F6CBE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		844EB4B921FF2884003F6CBE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		844EB4BC21FF320A003F6CBE /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		844EB4BD21FF320A003F6CBE /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,9 @@
 			children = (
 				84148C3921F9FDA4003CD070 /* SearchViewController.swift */,
 				84148C3A21F9FDA5003CD070 /* SearchViewController.xib */,
+				844EB4C021FF3987003F6CBE /* SearchViewModel.swift */,
+				844EB4BC21FF320A003F6CBE /* TrackCell.swift */,
+				844EB4BD21FF320A003F6CBE /* TrackCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -369,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */,
+				844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */,
 				84148C0D21F9F083003CD070 /* LaunchScreen.storyboard in Resources */,
 				84148C0A21F9F083003CD070 /* Assets.xcassets in Resources */,
 				84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */,
@@ -398,9 +408,11 @@
 			files = (
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
+				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
+				844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
 				84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,

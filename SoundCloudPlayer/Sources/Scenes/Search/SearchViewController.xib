@@ -12,6 +12,8 @@
   <objects>
     <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="SoundCloudPlayer" customModuleProvider="target">
       <connections>
+        <outlet property="searchBar" destination="lVi-Yl-Foc" id="6lV-BE-dxM"/>
+        <outlet property="tableView" destination="x2a-0U-mSU" id="oTl-NL-0tg"/>
         <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
       </connections>
     </placeholder>

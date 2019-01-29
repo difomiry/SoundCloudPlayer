@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document colorMatched="YES" propertyAccessControl="none" targetRuntime="iOS.CocoaTouch" toolsVersion="14460.31" type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" useAutolayout="YES" useSafeAreas="YES" useTraitCollections="YES" version="3.0">
+  <device id="retina4_7" orientation="portrait">
+    <adaptation id="fullscreen"/>
+  </device>
+  <dependencies>
+    <deployment identifier="iOS"/>
+    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+    <capability minToolsVersion="9.0" name="Safe area layout guides"/>
+    <capability minToolsVersion="8.0" name="documents saved in the Xcode 8 format"/>
+  </dependencies>
+  <objects>
+    <placeholder id="-1" placeholderIdentifier="IBFilesOwner" userLabel="File's Owner"/>
+    <placeholder customClass="UIResponder" id="-2" placeholderIdentifier="IBFirstResponder"/>
+    <tableViewCell contentMode="scaleToFill" customClass="TrackCell" customModule="SoundCloudPlayer" customModuleProvider="target" id="KGk-i7-Jjw" indentationWidth="10" reuseIdentifier="TrackCell" selectionStyle="default">
+      <rect height="44" key="frame" width="320" x="0.0" y="0.0"/>
+      <autoresizingMask flexibleMaxX="YES" flexibleMaxY="YES" key="autoresizingMask"/>
+      <tableViewCellContentView clipsSubviews="YES" contentMode="center" id="H2p-sc-9uM" key="contentView" multipleTouchEnabled="YES" opaque="NO" tableViewCell="KGk-i7-Jjw">
+        <rect height="43.5" key="frame" width="320" x="0.0" y="0.0"/>
+        <autoresizingMask key="autoresizingMask"/>
+        <subviews>
+          <label adjustsFontSizeToFit="NO" baselineAdjustment="alignBaselines" contentMode="left" horizontalHuggingPriority="251" id="dtu-O9-ItD" lineBreakMode="tailTruncation" opaque="NO" text="Nothing Else Matters" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" verticalHuggingPriority="251">
+            <rect height="21" key="frame" width="240" x="20" y="11.5"/>
+            <fontDescription key="fontDescription" pointSize="17" type="system"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+          </label>
+          <label adjustsFontSizeToFit="NO" baselineAdjustment="alignBaselines" contentMode="left" horizontalHuggingPriority="251" id="Vq2-KO-PMm" lineBreakMode="tailTruncation" opaque="NO" text="06:28" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" verticalHuggingPriority="251">
+            <rect height="16" key="frame" width="40" x="270" y="14"/>
+            <constraints>
+              <constraint constant="40" firstAttribute="width" id="TeW-2Q-xc3"/>
+            </constraints>
+            <fontDescription key="fontDescription" pointSize="13" type="system"/>
+            <color alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" key="textColor" white="0.66666666666666663"/>
+            <nil key="highlightedColor"/>
+          </label>
+        </subviews>
+        <constraints>
+          <constraint firstAttribute="centerY" firstItem="Vq2-KO-PMm" id="0mw-1B-XeY" secondAttribute="centerY" secondItem="H2p-sc-9uM"/>
+          <constraint firstAttribute="centerY" firstItem="dtu-O9-ItD" id="4Xv-AE-dog" secondAttribute="centerY" secondItem="H2p-sc-9uM"/>
+          <constraint constant="20" firstAttribute="leading" firstItem="dtu-O9-ItD" id="Lz5-eF-bEj" secondAttribute="leading" secondItem="H2p-sc-9uM"/>
+          <constraint constant="-10" firstAttribute="trailing" firstItem="Vq2-KO-PMm" id="VBg-GK-h2e" secondAttribute="trailing" secondItem="H2p-sc-9uM"/>
+          <constraint constant="-10" firstAttribute="trailing" firstItem="dtu-O9-ItD" id="Yap-j3-V6u" secondAttribute="leading" secondItem="Vq2-KO-PMm"/>
+        </constraints>
+      </tableViewCellContentView>
+      <viewLayoutGuide id="njF-e1-oar" key="safeArea"/>
+      <connections>
+        <outlet destination="Vq2-KO-PMm" id="xxa-cf-f7Y" property="durationLabel"/>
+        <outlet destination="dtu-O9-ItD" id="X2z-Ls-ICn" property="titleLabel"/>
+      </connections>
+    </tableViewCell>
+  </objects>
+</document>
