@@ -6,7 +6,6 @@ import RxCocoa
 final class SearchViewController: UIViewController {
 
   @IBOutlet private var searchBar: UISearchBar!
-
   @IBOutlet private var tableView: UITableView!
 
   private let viewModel: SearchViewModelType
@@ -38,6 +37,7 @@ final class SearchViewController: UIViewController {
       .disposed(by: disposeBag)
 
     viewModel.tracks
+      .observeOn(MainScheduler.instance)
       .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackViewModel, cell) in
         cell.bind(track)
       }

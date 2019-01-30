@@ -17,9 +17,9 @@ class TrackCell: UITableViewCell {
   }
 
   func bind(_ viewModel: TrackViewModel) {
-    setTitle(viewModel.title)
-    setUsername(viewModel.username)
-    setDuration(String(format: "%02i:%02i", ((viewModel.duration / 1000) / 60 % 60), (viewModel.duration / 1000) % 60))
+    titleLabel.text = viewModel.title
+    usernameLabel.text = viewModel.username
+    durationLabel.text = String(format: "%02i:%02i", ((viewModel.duration / 1000) / 60 % 60), (viewModel.duration / 1000) % 60)
 
     viewModel
       .artwork
@@ -27,18 +27,6 @@ class TrackCell: UITableViewCell {
       .do(onNext: { _ in UIView.animate(withDuration: 0.1) { [weak self] in self?.artworkImageView.alpha = 1 } })
       .bind(to: artworkImageView.rx.image)
       .disposed(by: disposeBag)
-  }
-
-  func setTitle(_ title: String) {
-    titleLabel.text = title
-  }
-
-  func setDuration(_ duration: String) {
-    durationLabel.text = duration
-  }
-
-  func setUsername(_ username: String) {
-    usernameLabel.text = username
   }
 
 }

@@ -24,11 +24,9 @@ final class SoundCloudService: SoundCloudServiceType {
   }
 
   func fetchArtwork(path: String?) -> Observable<UIImage> {
-
     guard let path = path, let url = URL(string: path) else {
       return .just(UIImage(named: "Artwork")!)
     }
-
     return provider.httpClient.rx
       .task(request: HTTPRequest(target: url), type: HTTPResponse.self)
       .map { response in UIImage(data: response.data) ?? UIImage(named: "Artwork")! }

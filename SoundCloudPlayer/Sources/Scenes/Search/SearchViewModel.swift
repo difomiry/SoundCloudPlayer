@@ -31,7 +31,6 @@ final class SearchViewModel: SearchViewModelType {
         return soundCloudService.search(query: query).catchErrorJustReturn([])
       }
       .map { tracks in tracks.map { track in TrackViewModel(track, soundCloudService: soundCloudService) } }
-      .observeOn(MainScheduler.instance)
   }
 
 }
