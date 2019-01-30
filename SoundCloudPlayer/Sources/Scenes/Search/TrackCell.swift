@@ -16,7 +16,7 @@ class TrackCell: UITableViewCell {
     artworkImageView.alpha = 0
   }
 
-  func bind(_ viewModel: TrackViewModel) {
+  func bind(to viewModel: TrackViewModel) {
     titleLabel.text = viewModel.title
     usernameLabel.text = viewModel.username
     durationLabel.text = String(format: "%02i:%02i", ((viewModel.duration / 1000) / 60 % 60), (viewModel.duration / 1000) % 60)

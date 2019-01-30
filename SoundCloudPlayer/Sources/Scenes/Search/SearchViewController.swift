@@ -39,7 +39,7 @@ final class SearchViewController: UIViewController {
     viewModel.tracks
       .observeOn(MainScheduler.instance)
       .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackViewModel, cell) in
-        cell.bind(track)
+        cell.bind(to: track)
       }
       .disposed(by: disposeBag)
   }
