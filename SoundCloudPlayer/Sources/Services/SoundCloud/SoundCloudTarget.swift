@@ -1,19 +1,19 @@
 
-enum SoundCloudRequest {
+import Foundation
 
-  case track(Int)
-  case stream(Int)
-  case search(String)
-
+enum SoundCloudTarget {
+  case track(id: Int)
+  case stream(id: Int)
+  case search(query: String)
 }
 
-extension SoundCloudRequest: HTTPRequestType {
+extension SoundCloudTarget: HTTPTargetType {
   
   var baseURL: URL {
     return URL(string: AppConstants.soundCloudApiPath)!
   }
 
-  var path: String {
+  var path: String? {
     switch self {
     case let .track(id):
       return "tracks/\(id)"
@@ -24,7 +24,7 @@ extension SoundCloudRequest: HTTPRequestType {
     }
   }
 
-  var parameters: HTTPRequestParameters? {
+  var task: HTTPTargetTask? {
 
     var parameters = ["client_id": AppConstants.soundCloudApiKey]
 
@@ -36,7 +36,7 @@ extension SoundCloudRequest: HTTPRequestType {
       break
     }
 
-    return .url(parameters)
+    return .url(parameters: parameters)
   }
 
 }

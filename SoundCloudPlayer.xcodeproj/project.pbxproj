@@ -20,11 +20,11 @@
 		84148C7821FB9CEF003CD070 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7721FB9CEF003CD070 /* Track.swift */; };
 		84148C7A21FBA548003CD070 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7921FBA548003CD070 /* Result.swift */; };
 		84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */; };
-		84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */; };
-		84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */; };
+		84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */; };
+		84148C8421FBCC6D003CD070 /* HTTPTargetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8321FBCC6D003CD070 /* HTTPTargetTask.swift */; };
 		84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8521FBD43E003CD070 /* HTTPError.swift */; };
 		84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8721FBE383003CD070 /* HTTPClient.swift */; };
-		84148C9321FDDBCD003CD070 /* SoundCloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudRequest.swift */; };
+		84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */; };
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 		84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA121FE1271003CD070 /* SoundCloudService.swift */; };
 		84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA521FE19B8003CD070 /* ServiceProvider.swift */; };
@@ -35,6 +35,11 @@
 		844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* TrackCell.swift */; };
 		844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* TrackCell.xib */; };
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
+		8491FE16220054930077D92C /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* TrackViewModel.swift */; };
+		8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE182201B6270077D92C /* HTTPRequest.swift */; };
+		8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1A2201B6630077D92C /* HTTPResponse.swift */; };
+		8491FE1D2201CE670077D92C /* HTTPClient+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */; };
+		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,11 +95,11 @@
 		84148C7721FB9CEF003CD070 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		84148C7921FBA548003CD070 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestType.swift; sourceTree = "<group>"; };
-		84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestParameters.swift; sourceTree = "<group>"; };
+		84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTargetType.swift; sourceTree = "<group>"; };
+		84148C8321FBCC6D003CD070 /* HTTPTargetTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTargetTask.swift; sourceTree = "<group>"; };
 		84148C8521FBD43E003CD070 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		84148C8721FBE383003CD070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		84148C9221FDDBCD003CD070 /* SoundCloudRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudRequest.swift; sourceTree = "<group>"; };
+		84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudTarget.swift; sourceTree = "<group>"; };
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84148CA121FE1271003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148CA521FE19B8003CD070 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
@@ -103,6 +108,11 @@
 		844EB4BC21FF320A003F6CBE /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		844EB4BD21FF320A003F6CBE /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		8491FE15220054930077D92C /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		8491FE182201B6270077D92C /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		8491FE1A2201B6630077D92C /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Reactive.swift"; sourceTree = "<group>"; };
+		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +232,7 @@
 				844EB4C021FF3987003F6CBE /* SearchViewModel.swift */,
 				844EB4BC21FF320A003F6CBE /* TrackCell.swift */,
 				844EB4BD21FF320A003F6CBE /* TrackCell.xib */,
+				8491FE15220054930077D92C /* TrackViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -238,11 +249,7 @@
 		84148C4921FB68A8003CD070 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				84148C8721FBE383003CD070 /* HTTPClient.swift */,
-				84148C8521FBD43E003CD070 /* HTTPError.swift */,
-				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
-				84148C8321FBCC6D003CD070 /* HTTPRequestParameters.swift */,
-				84148C7D21FBA79A003CD070 /* HTTPRequestType.swift */,
+				8491FE172201B54F0077D92C /* HTTP */,
 				84148C7921FBA548003CD070 /* Result.swift */,
 			);
 			path = Utilities;
@@ -269,10 +276,26 @@
 		84148CA021FE11A3003CD070 /* SoundCloud */ = {
 			isa = PBXGroup;
 			children = (
-				84148C9221FDDBCD003CD070 /* SoundCloudRequest.swift */,
+				84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */,
 				84148CA121FE1271003CD070 /* SoundCloudService.swift */,
 			);
 			path = SoundCloud;
+			sourceTree = "<group>";
+		};
+		8491FE172201B54F0077D92C /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
+				84148C8521FBD43E003CD070 /* HTTPError.swift */,
+				84148C8321FBCC6D003CD070 /* HTTPTargetTask.swift */,
+				84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */,
+				8491FE182201B6270077D92C /* HTTPRequest.swift */,
+				8491FE1A2201B6630077D92C /* HTTPResponse.swift */,
+				84148C8721FBE383003CD070 /* HTTPClient.swift */,
+				8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */,
+				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,22 +432,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8491FE16220054930077D92C /* TrackViewModel.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
-				84148C8421FBCC6D003CD070 /* HTTPRequestParameters.swift in Sources */,
+				84148C8421FBCC6D003CD070 /* HTTPTargetTask.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
 				844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */,
+				8491FE1D2201CE670077D92C /* HTTPClient+Reactive.swift in Sources */,
 				840157AE220010080034D1A5 /* User.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
 				84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
+				8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */,
 				84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */,
+				8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */,
 				84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */,
-				84148C9321FDDBCD003CD070 /* SoundCloudRequest.swift in Sources */,
+				84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */,
-				84148C7E21FBA79A003CD070 /* HTTPRequestType.swift in Sources */,
+				8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */,
+				84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

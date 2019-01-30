@@ -1,6 +1,5 @@
 
 enum HTTPMethod: String {
-
   case get = "GET"
   case post = "POST"
   case put = "PUT"
@@ -9,5 +8,4 @@ enum HTTPMethod: String {
   case patch = "PATCH"
   case options = "OPTIONS"
   case trace = "TRACE"
-
 }

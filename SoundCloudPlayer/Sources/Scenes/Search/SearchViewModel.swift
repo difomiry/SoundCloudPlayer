@@ -6,7 +6,7 @@ protocol SearchViewModelType {
   var query: AnyObserver<String> { get }
 
   /// Emits an array of fetched tracks.
-  var tracks: Observable<[Track]> { get }
+  var tracks: Observable<[TrackViewModel]> { get }
 
 }
 
@@ -16,7 +16,7 @@ final class SearchViewModel: SearchViewModelType {
   private(set) var query: AnyObserver<String>
 
   /// Emits an array of fetched tracks.
-  private(set) var tracks: Observable<[Track]>
+  private(set) var tracks: Observable<[TrackViewModel]>
 
   init(soundCloudService: SoundCloudServiceType) {
 
@@ -24,10 +24,13 @@ final class SearchViewModel: SearchViewModelType {
     query = _query.asObserver()
 
     tracks = _query.asObservable()
-      .throttle(2.0, scheduler: MainScheduler.instance)
+      .throttle(0.5, scheduler: MainScheduler.instance)
       .distinctUntilChanged()
-      .filter { query in !query.isEmpty }
-      .flatMapLatest { query in soundCloudService.search(query: query).catchErrorJustReturn([]) }
+      .flatMapLatest { query -> Observable<[Track]> in
+        if query.isEmpty { return .just([]) }
+        return soundCloudService.search(query: query).catchErrorJustReturn([])
+      }
+      .map { tracks in tracks.map { track in TrackViewModel(track, soundCloudService: soundCloudService) } }
       .observeOn(MainScheduler.instance)
   }
 

@@ -1,9 +1,11 @@
 
-enum HTTPError: Error {
-
+enum HTTPError {
   case invalidRequest
   case invalidResponse
   case networkError(Error)
+}
+
+extension HTTPError: Error {
 
   var localizedDescription: String {
     switch self {

@@ -1,53 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document colorMatched="YES" propertyAccessControl="none" targetRuntime="iOS.CocoaTouch" toolsVersion="14460.31" type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" useAutolayout="YES" useSafeAreas="YES" useTraitCollections="YES" version="3.0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
   <device id="retina4_7" orientation="portrait">
     <adaptation id="fullscreen"/>
   </device>
   <dependencies>
     <deployment identifier="iOS"/>
     <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-    <capability minToolsVersion="9.0" name="Safe area layout guides"/>
-    <capability minToolsVersion="8.0" name="documents saved in the Xcode 8 format"/>
+    <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
   </dependencies>
   <objects>
-    <placeholder id="-1" placeholderIdentifier="IBFilesOwner" userLabel="File's Owner"/>
-    <placeholder customClass="UIResponder" id="-2" placeholderIdentifier="IBFirstResponder"/>
-    <tableViewCell contentMode="scaleToFill" customClass="TrackCell" customModule="SoundCloudPlayer" customModuleProvider="target" id="KGk-i7-Jjw" indentationWidth="10" reuseIdentifier="TrackCell" selectionStyle="default">
-      <rect height="44" key="frame" width="320" x="0.0" y="0.0"/>
-      <autoresizingMask flexibleMaxX="YES" flexibleMaxY="YES" key="autoresizingMask"/>
-      <tableViewCellContentView clipsSubviews="YES" contentMode="center" id="H2p-sc-9uM" key="contentView" multipleTouchEnabled="YES" opaque="NO" tableViewCell="KGk-i7-Jjw">
-        <rect height="43.5" key="frame" width="320" x="0.0" y="0.0"/>
+    <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+    <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="69" id="KGk-i7-Jjw" customClass="TrackCell" customModule="SoundCloudPlayer" customModuleProvider="target">
+      <rect key="frame" x="0.0" y="0.0" width="308" height="60"/>
+      <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+      <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+        <rect key="frame" x="0.0" y="0.0" width="308" height="59.5"/>
         <autoresizingMask key="autoresizingMask"/>
         <subviews>
-          <label adjustsFontSizeToFit="NO" baselineAdjustment="alignBaselines" contentMode="left" horizontalHuggingPriority="251" id="dtu-O9-ItD" lineBreakMode="tailTruncation" opaque="NO" text="Nothing Else Matters" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" verticalHuggingPriority="251">
-            <rect height="21" key="frame" width="240" x="20" y="11.5"/>
-            <fontDescription key="fontDescription" pointSize="17" type="system"/>
+          <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artwork" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-3z-z0b">
+            <rect key="frame" x="10" y="10" width="40" height="40"/>
+            <constraints>
+              <constraint firstAttribute="height" constant="40" id="9Za-22-dG2"/>
+              <constraint firstAttribute="width" constant="40" id="hhC-JV-x0B"/>
+            </constraints>
+          </imageView>
+          <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Else Matters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-O9-ItD">
+            <rect key="frame" x="60" y="10" width="188" height="20"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
             <nil key="textColor"/>
             <nil key="highlightedColor"/>
           </label>
-          <label adjustsFontSizeToFit="NO" baselineAdjustment="alignBaselines" contentMode="left" horizontalHuggingPriority="251" id="Vq2-KO-PMm" lineBreakMode="tailTruncation" opaque="NO" text="06:28" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" verticalHuggingPriority="251">
-            <rect height="16" key="frame" width="40" x="270" y="14"/>
+          <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-KO-PMm">
+            <rect key="frame" x="258" y="12" width="40" height="16"/>
             <constraints>
-              <constraint constant="40" firstAttribute="width" id="TeW-2Q-xc3"/>
+              <constraint firstAttribute="width" constant="40" id="TeW-2Q-xc3"/>
             </constraints>
-            <fontDescription key="fontDescription" pointSize="13" type="system"/>
-            <color alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" key="textColor" white="0.66666666666666663"/>
+            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <nil key="highlightedColor"/>
+          </label>
+          <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurt Cobain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-Dy-taJ">
+            <rect key="frame" x="60" y="30" width="188" height="20"/>
+            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <nil key="highlightedColor"/>
           </label>
         </subviews>
         <constraints>
-          <constraint firstAttribute="centerY" firstItem="Vq2-KO-PMm" id="0mw-1B-XeY" secondAttribute="centerY" secondItem="H2p-sc-9uM"/>
-          <constraint firstAttribute="centerY" firstItem="dtu-O9-ItD" id="4Xv-AE-dog" secondAttribute="centerY" secondItem="H2p-sc-9uM"/>
-          <constraint constant="20" firstAttribute="leading" firstItem="dtu-O9-ItD" id="Lz5-eF-bEj" secondAttribute="leading" secondItem="H2p-sc-9uM"/>
-          <constraint constant="-10" firstAttribute="trailing" firstItem="Vq2-KO-PMm" id="VBg-GK-h2e" secondAttribute="trailing" secondItem="H2p-sc-9uM"/>
-          <constraint constant="-10" firstAttribute="trailing" firstItem="dtu-O9-ItD" id="Yap-j3-V6u" secondAttribute="leading" secondItem="Vq2-KO-PMm"/>
+          <constraint firstItem="Vq2-KO-PMm" firstAttribute="centerY" secondItem="dtu-O9-ItD" secondAttribute="centerY" id="0mw-1B-XeY"/>
+          <constraint firstItem="dtu-O9-ItD" firstAttribute="top" secondItem="aX0-3z-z0b" secondAttribute="top" id="4Xv-AE-dog"/>
+          <constraint firstItem="thm-Dy-taJ" firstAttribute="bottom" secondItem="aX0-3z-z0b" secondAttribute="bottom" id="5q8-Cf-Syb"/>
+          <constraint firstItem="dtu-O9-ItD" firstAttribute="leading" secondItem="aX0-3z-z0b" secondAttribute="trailing" constant="10" id="Lz5-eF-bEj"/>
+          <constraint firstItem="thm-Dy-taJ" firstAttribute="trailing" secondItem="dtu-O9-ItD" secondAttribute="trailing" id="STU-uC-1yz"/>
+          <constraint firstItem="Vq2-KO-PMm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-10" id="VBg-GK-h2e"/>
+          <constraint firstItem="dtu-O9-ItD" firstAttribute="trailing" secondItem="Vq2-KO-PMm" secondAttribute="leading" constant="-10" id="Yap-j3-V6u"/>
+          <constraint firstItem="aX0-3z-z0b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Zwb-hs-d8C"/>
+          <constraint firstItem="thm-Dy-taJ" firstAttribute="leading" secondItem="dtu-O9-ItD" secondAttribute="leading" id="i3e-KV-zMQ"/>
+          <constraint firstItem="dtu-O9-ItD" firstAttribute="bottom" secondItem="aX0-3z-z0b" secondAttribute="centerY" id="udW-mj-ftj"/>
+          <constraint firstItem="thm-Dy-taJ" firstAttribute="top" secondItem="aX0-3z-z0b" secondAttribute="centerY" id="xoc-HY-ADu"/>
+          <constraint firstItem="aX0-3z-z0b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="y3f-6r-Bui"/>
         </constraints>
       </tableViewCellContentView>
-      <viewLayoutGuide id="njF-e1-oar" key="safeArea"/>
+      <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
       <connections>
-        <outlet destination="Vq2-KO-PMm" id="xxa-cf-f7Y" property="durationLabel"/>
-        <outlet destination="dtu-O9-ItD" id="X2z-Ls-ICn" property="titleLabel"/>
+        <outlet property="artworkImageView" destination="aX0-3z-z0b" id="Znk-mT-zUC"/>
+        <outlet property="durationLabel" destination="Vq2-KO-PMm" id="xxa-cf-f7Y"/>
+        <outlet property="titleLabel" destination="dtu-O9-ItD" id="X2z-Ls-ICn"/>
+        <outlet property="usernameLabel" destination="thm-Dy-taJ" id="pDC-ze-Qx2"/>
       </connections>
+      <point key="canvasLocation" x="123.2" y="165.96701649175412"/>
     </tableViewCell>
   </objects>
+  <resources>
+    <image name="Artwork" width="200" height="200"/>
+  </resources>
 </document>

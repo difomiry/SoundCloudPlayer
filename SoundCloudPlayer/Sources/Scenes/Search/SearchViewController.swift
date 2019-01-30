@@ -27,6 +27,10 @@ final class SearchViewController: UIViewController {
 
     navigationController?.isNavigationBarHidden = true
 
+    tableView.separatorInset = .zero
+    tableView.rowHeight = 60
+    tableView.tableFooterView = UIView()
+
     tableView.register(UINib(nibName: "TrackCell", bundle: nil), forCellReuseIdentifier: "TrackCell")
 
     searchBar.rx.text.orEmpty
@@ -34,9 +38,8 @@ final class SearchViewController: UIViewController {
       .disposed(by: disposeBag)
 
     viewModel.tracks
-      .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: Track, cell) in
-        cell.setTitle(track.title)
-        cell.setDuration(String(format: "%02i:%02i", ((track.duration / 1000) / 60 % 60), (track.duration / 1000) % 60))
+      .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackViewModel, cell) in
+        cell.bind(track)
       }
       .disposed(by: disposeBag)
   }
