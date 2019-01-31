@@ -42,6 +42,15 @@ final class SearchViewController: UIViewController {
         cell.bind(to: track)
       }
       .disposed(by: disposeBag)
+
+    viewModel.keyboardHeight
+      .map { height -> UIEdgeInsets in .init(top: 0, left: 0, bottom: height, right: 0) }
+      .observeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] insets in
+        self?.tableView.contentInset = insets
+        self?.tableView.scrollIndicatorInsets = insets
+      })
+      .disposed(by: disposeBag)
   }
 
 }

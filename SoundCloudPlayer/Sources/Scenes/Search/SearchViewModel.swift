@@ -1,3 +1,5 @@
+
+import UIKit
 import RxSwift
 
 protocol SearchViewModelType {
@@ -8,15 +10,21 @@ protocol SearchViewModelType {
   /// Emits an array of fetched tracks.
   var tracks: Observable<[TrackViewModel]> { get }
 
+  /// Emits a keyboard height.
+  var keyboardHeight: Observable<CGFloat> { get }
+
 }
 
 final class SearchViewModel: SearchViewModelType {
 
   /// Call to update search query.
-  private(set) var query: AnyObserver<String>
+  let query: AnyObserver<String>
 
   /// Emits an array of fetched tracks.
-  private(set) var tracks: Observable<[TrackViewModel]>
+  let tracks: Observable<[TrackViewModel]>
+
+  /// Emits a keyboard height.
+  let keyboardHeight: Observable<CGFloat>
 
   init(soundCloudService: SoundCloudServiceType) {
 
@@ -31,6 +39,14 @@ final class SearchViewModel: SearchViewModelType {
         return soundCloudService.search(query: query).catchErrorJustReturn([])
       }
       .map { tracks in tracks.map { track in TrackViewModel(track, soundCloudService: soundCloudService) } }
+
+    let keyboardWillShow = NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
+      .map { notification -> CGFloat in (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0 }
+
+    let keyboardWillHide = NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
+      .map { _ -> CGFloat in 0 }
+
+    keyboardHeight = Observable.from([keyboardWillShow, keyboardWillHide]).merge()
   }
 
 }
