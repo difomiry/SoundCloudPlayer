@@ -56,7 +56,7 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputType, Sear
         if query.isEmpty { return .just([]) }
         return soundCloudService.search(query: query).catchErrorJustReturn([])
       }
-      .map { tracks in tracks.map { track -> TrackCellViewModelType in TrackCellViewModel(track, soundCloudService: soundCloudService) } }
+      .map { tracks in tracks.map { track -> TrackCellViewModelType in TrackCellViewModel(track, artwork: soundCloudService.fetchArtwork(path: track.artwork)) } }
   }
 
 }

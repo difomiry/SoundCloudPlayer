@@ -51,11 +51,11 @@ final class TrackCellViewModel: TrackCellViewModelType, TrackCellViewModelInputT
   /// Emits the track artwork.
   let artwork: Observable<UIImage>
 
-  init(_ track: Track, soundCloudService: SoundCloudServiceType) {
+  init(_ track: Track, artwork: Observable<UIImage>) {
     title = Observable.just(track.title)
     username = Observable.just(track.user.username)
     duration = Observable.just(track.duration)
-    artwork = soundCloudService.fetchArtwork(path: track.artwork)
+    self.artwork = artwork
   }
 
 }
