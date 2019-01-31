@@ -16,14 +16,22 @@ class TrackCell: UITableViewCell {
     artworkImageView.alpha = 0
   }
 
-  func bind(to viewModel: TrackViewModel) {
-    titleLabel.text = viewModel.title
-    usernameLabel.text = viewModel.username
-    durationLabel.text = String(format: "%02i:%02i", ((viewModel.duration / 1000) / 60 % 60), (viewModel.duration / 1000) % 60)
+  func bind(to viewModel: TrackCellViewModelType) {
 
-    viewModel
-      .artwork
-      .observeOn(MainScheduler.instance)
+    viewModel.output.title
+      .bind(to: titleLabel.rx.text)
+      .disposed(by: disposeBag)
+
+    viewModel.output.username
+      .bind(to: usernameLabel.rx.text)
+      .disposed(by: disposeBag)
+
+    viewModel.output.duration
+      .map { duration -> String in String(format: "%02i:%02i", ((duration / 1000) / 60 % 60), (duration / 1000) % 60) }
+      .bind(to: durationLabel.rx.text)
+      .disposed(by: disposeBag)
+
+    viewModel.output.artwork
       .do(onNext: { _ in UIView.animate(withDuration: 0.1) { [weak self] in self?.artworkImageView.alpha = 1 } })
       .bind(to: artworkImageView.rx.image)
       .disposed(by: disposeBag)

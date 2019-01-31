@@ -5,12 +5,17 @@ import RxCocoa
 
 final class SearchViewController: UIViewController {
 
+  // MARK: - IBOutlets
+
   @IBOutlet private var searchBar: UISearchBar!
   @IBOutlet private var tableView: UITableView!
 
-  private let viewModel: SearchViewModelType
+  // MARK: - Properties
 
+  private let viewModel: SearchViewModelType
   private let disposeBag = DisposeBag()
+
+  // MARK: - Init
 
   init(viewModel: SearchViewModelType) {
     self.viewModel = viewModel
@@ -20,6 +25,8 @@ final class SearchViewController: UIViewController {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+
+  // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,17 +40,17 @@ final class SearchViewController: UIViewController {
     tableView.register(UINib(nibName: "TrackCell", bundle: nil), forCellReuseIdentifier: "TrackCell")
 
     searchBar.rx.text.orEmpty
-      .bind(to: viewModel.query)
+      .bind(to: viewModel.input.query)
       .disposed(by: disposeBag)
 
-    viewModel.tracks
+    viewModel.output.tracks
       .observeOn(MainScheduler.instance)
-      .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackViewModel, cell) in
+      .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackCellViewModelType, cell) in
         cell.bind(to: track)
       }
       .disposed(by: disposeBag)
 
-    viewModel.keyboardHeight
+    keyboardHeight
       .map { height -> UIEdgeInsets in .init(top: 0, left: 0, bottom: height, right: 0) }
       .observeOn(MainScheduler.instance)
       .subscribe(onNext: { [weak self] insets in

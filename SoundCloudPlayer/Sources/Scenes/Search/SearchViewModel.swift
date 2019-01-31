@@ -1,30 +1,48 @@
 
-import UIKit
 import RxSwift
 
-protocol SearchViewModelType {
+protocol SearchViewModelInputType {
 
-  /// Call to update search query.
+  /// Call when search query is updated.
   var query: AnyObserver<String> { get }
-
-  /// Emits an array of fetched tracks.
-  var tracks: Observable<[TrackViewModel]> { get }
-
-  /// Emits a keyboard height.
-  var keyboardHeight: Observable<CGFloat> { get }
 
 }
 
-final class SearchViewModel: SearchViewModelType {
+protocol SearchViewModelOutputType {
 
-  /// Call to update search query.
+  /// Emits the search results.
+  var tracks: Observable<[TrackCellViewModelType]> { get }
+
+}
+
+protocol SearchViewModelType {
+  var input: SearchViewModelInputType { get }
+  var output: SearchViewModelOutputType { get }
+}
+
+final class SearchViewModel: SearchViewModelType, SearchViewModelInputType, SearchViewModelOutputType {
+
+  // MARK: - Input & Output
+
+  var input: SearchViewModelInputType {
+    return self
+  }
+
+  var output: SearchViewModelOutputType {
+    return self
+  }
+
+  // MARK: - Inputs
+
+  /// Call when search query is updated.
   let query: AnyObserver<String>
 
-  /// Emits an array of fetched tracks.
-  let tracks: Observable<[TrackViewModel]>
+  // MARK: - Outputs
 
-  /// Emits a keyboard height.
-  let keyboardHeight: Observable<CGFloat>
+  /// Emits the search results.
+  let tracks: Observable<[TrackCellViewModelType]>
+
+  // MARK: - Init
 
   init(soundCloudService: SoundCloudServiceType) {
 
@@ -38,15 +56,7 @@ final class SearchViewModel: SearchViewModelType {
         if query.isEmpty { return .just([]) }
         return soundCloudService.search(query: query).catchErrorJustReturn([])
       }
-      .map { tracks in tracks.map { track in TrackViewModel(track, soundCloudService: soundCloudService) } }
-
-    let keyboardWillShow = NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
-      .map { notification -> CGFloat in (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0 }
-
-    let keyboardWillHide = NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
-      .map { _ -> CGFloat in 0 }
-
-    keyboardHeight = Observable.from([keyboardWillShow, keyboardWillHide]).merge()
+      .map { tracks in tracks.map { track -> TrackCellViewModelType in TrackCellViewModel(track, soundCloudService: soundCloudService) } }
   }
 
 }

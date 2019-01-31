@@ -35,11 +35,12 @@
 		844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* TrackCell.swift */; };
 		844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* TrackCell.xib */; };
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
-		8491FE16220054930077D92C /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* TrackViewModel.swift */; };
+		8491FE16220054930077D92C /* TrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* TrackCellViewModel.swift */; };
 		8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE182201B6270077D92C /* HTTPRequest.swift */; };
 		8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1A2201B6630077D92C /* HTTPResponse.swift */; };
 		8491FE1D2201CE670077D92C /* HTTPClient+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */; };
 		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
+		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,11 +109,12 @@
 		844EB4BC21FF320A003F6CBE /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		844EB4BD21FF320A003F6CBE /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		8491FE15220054930077D92C /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		8491FE15220054930077D92C /* TrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellViewModel.swift; sourceTree = "<group>"; };
 		8491FE182201B6270077D92C /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		8491FE1A2201B6630077D92C /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Reactive.swift"; sourceTree = "<group>"; };
 		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
+		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		84148C3121F9F848003CD070 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				84C71D39220339250049546F /* Extensions */,
 				84148C9121FDDBA5003CD070 /* Services */,
 				84148C7621FB9CB2003CD070 /* Models */,
 				84148C4921FB68A8003CD070 /* Utilities */,
@@ -232,7 +235,7 @@
 				844EB4C021FF3987003F6CBE /* SearchViewModel.swift */,
 				844EB4BC21FF320A003F6CBE /* TrackCell.swift */,
 				844EB4BD21FF320A003F6CBE /* TrackCell.xib */,
-				8491FE15220054930077D92C /* TrackViewModel.swift */,
+				8491FE15220054930077D92C /* TrackCellViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -296,6 +299,14 @@
 				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
 			path = HTTP;
+			sourceTree = "<group>";
+		};
+		84C71D39220339250049546F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8491FE16220054930077D92C /* TrackViewModel.swift in Sources */,
+				8491FE16220054930077D92C /* TrackCellViewModel.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
@@ -452,6 +463,7 @@
 				84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */,
 				8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */,
+				84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
