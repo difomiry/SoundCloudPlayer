@@ -1,11 +1,15 @@
 
 import Foundation
 
+typealias HTTPResult = Result<HTTPResponse, HTTPError>
+
+typealias HTTPCompletion = (HTTPResult) ->Void
+
 protocol HTTPClientType {
 
   init(session: URLSession, queue: DispatchQueue)
 
-  func task<Request: HTTPRequestType, Response: HTTPResponseType>(request: Request, type: Response.Type, completion: @escaping (Result<Response, HTTPError>) -> Void) -> URLSessionDataTask?
+  func task<Request: HTTPRequestType>(request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask?
 
 }
 
@@ -19,9 +23,9 @@ class HTTPClient: HTTPClientType {
     self.queue = queue
   }
 
-  func task<Request: HTTPRequestType, Response: HTTPResponseType>(request: Request, type: Response.Type, completion: @escaping (Result<Response, HTTPError>) -> Void) -> URLSessionDataTask? {
+  func task<Request: HTTPRequestType>(request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask? {
 
-    func _completion(result: Result<Response, HTTPError>) {
+    func _completion(result: HTTPResult) {
       self.queue.async {
         completion(result)
       }
@@ -36,13 +40,13 @@ class HTTPClient: HTTPClientType {
       return nil
     }
 
-    let task = session.dataTask(with: urlRequest) { data, _, error in
-      switch (data, error) {
-      case let (.some(data), .none):
-        _completion(result: .success(Response.init(data: data)))
-      case let (.none, .some(error)):
+    let task = session.dataTask(with: urlRequest) { data, response, error in
+      switch (data, response as? HTTPURLResponse, error) {
+      case let (.some(data), .some(response), .none):
+        _completion(result: .success(HTTPResponse(code: response.statusCode, data: data)))
+      case let (.none, .none, .some(error)):
         _completion(result: .failure(HTTPError.networkError(error)))
-      case (.none, .none), (.some, .some):
+      default:
         _completion(result: .failure(HTTPError.invalidResponse))
       }
     }

@@ -19,8 +19,8 @@ final class SoundCloudService: SoundCloudServiceType {
 
   func search(query: String) -> Observable<[Track]> {
     return httpClient.rx
-      .task(request: HTTPRequest(target: SoundCloudTarget.search(query: query)), type: HTTPResponse.self)
-      .map { response in try response.json(type: [Track].self) }
+      .task(request: HTTPRequest(target: SoundCloudTarget.search(query: query)))
+      .map { response in try response.data.map(type: [Track].self) }
   }
 
   func fetchArtwork(path: String?) -> Observable<UIImage> {
@@ -28,14 +28,14 @@ final class SoundCloudService: SoundCloudServiceType {
       return .just(UIImage(named: "Artwork")!)
     }
     return httpClient.rx
-      .task(request: HTTPRequest(target: url), type: HTTPResponse.self)
+      .task(request: HTTPRequest(target: url))
       .map { response in UIImage(data: response.data) ?? UIImage(named: "Artwork")! }
   }
 
   func fetchTrack(id: Int) -> Observable<Track> {
     return httpClient.rx
-      .task(request: HTTPRequest(target: SoundCloudTarget.track(id: id)), type: HTTPResponse.self)
-      .map { response in try response.json(type: Track.self) }
+      .task(request: HTTPRequest(target: SoundCloudTarget.track(id: id)))
+      .map { response in try response.data.map(type: Track.self) }
   }
 
   func fetchStreamUrl(id: Int) -> Observable<URL> {
