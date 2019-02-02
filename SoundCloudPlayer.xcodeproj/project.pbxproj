@@ -295,8 +295,6 @@
 				8491FE182201B6270077D92C /* HTTPRequest.swift */,
 				8491FE1A2201B6630077D92C /* HTTPResponse.swift */,
 				84148C8721FBE383003CD070 /* HTTPClient.swift */,
-				8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */,
-				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -304,7 +302,9 @@
 		84C71D39220339250049546F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */,
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
+				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
