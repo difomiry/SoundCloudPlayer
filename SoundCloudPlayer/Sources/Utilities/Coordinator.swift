@@ -3,6 +3,8 @@ import RxSwift
 
 class Coordinator<Result> {
 
+  let disposeBag = DisposeBag()
+
   func start() -> Observable<Result> {
     fatalError()
   }
