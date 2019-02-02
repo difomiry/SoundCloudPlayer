@@ -2,9 +2,9 @@
 import UIKit
 import RxSwift
 
-protocol TrackCellViewModelInputType {}
+protocol SearchCellViewModelInputType {}
 
-protocol TrackCellViewModelOutputType {
+protocol SearchCellViewModelOutputType {
 
   /// Emits the track title.
   var title: Observable<String> { get }
@@ -20,20 +20,20 @@ protocol TrackCellViewModelOutputType {
 
 }
 
-protocol TrackCellViewModelType {
-  var input: TrackCellViewModelInputType { get }
-  var output: TrackCellViewModelOutputType { get }
+protocol SearchCellViewModelType {
+  var input: SearchCellViewModelInputType { get }
+  var output: SearchCellViewModelOutputType { get }
 }
 
-final class TrackCellViewModel: TrackCellViewModelType, TrackCellViewModelInputType, TrackCellViewModelOutputType {
+final class SearchCellViewModel: SearchCellViewModelType, SearchCellViewModelInputType, SearchCellViewModelOutputType {
 
   // MARK: - Input & Output
 
-  var input: TrackCellViewModelInputType {
+  var input: SearchCellViewModelInputType {
     return self
   }
 
-  var output: TrackCellViewModelOutputType {
+  var output: SearchCellViewModelOutputType {
     return self
   }
 

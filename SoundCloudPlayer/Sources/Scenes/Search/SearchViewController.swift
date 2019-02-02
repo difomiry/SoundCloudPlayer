@@ -37,7 +37,7 @@ final class SearchViewController: UIViewController {
     tableView.rowHeight = 60
     tableView.tableFooterView = UIView()
 
-    tableView.register(UINib(nibName: "TrackCell", bundle: nil), forCellReuseIdentifier: "TrackCell")
+    tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
 
     searchBar.rx.text.orEmpty
       .bind(to: viewModel.input.query)
@@ -45,7 +45,7 @@ final class SearchViewController: UIViewController {
 
     viewModel.output.tracks
       .observeOn(MainScheduler.instance)
-      .bind(to: tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { (index, track: TrackCellViewModelType, cell) in
+      .bind(to: tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModelType, cell) in
         cell.bind(to: track)
       }
       .disposed(by: disposeBag)

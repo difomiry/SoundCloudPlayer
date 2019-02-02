@@ -11,7 +11,7 @@ protocol SearchViewModelInputType {
 protocol SearchViewModelOutputType {
 
   /// Emits the search results.
-  var tracks: Observable<[TrackCellViewModelType]> { get }
+  var tracks: Observable<[SearchCellViewModelType]> { get }
 
 }
 
@@ -40,7 +40,7 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputType, Sear
   // MARK: - Outputs
 
   /// Emits the search results.
-  let tracks: Observable<[TrackCellViewModelType]>
+  let tracks: Observable<[SearchCellViewModelType]>
 
   // MARK: - Init
 
@@ -56,7 +56,7 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputType, Sear
         if query.isEmpty { return .just([]) }
         return soundCloudService.search(query: query).catchErrorJustReturn([])
       }
-      .map { tracks in tracks.map { track -> TrackCellViewModelType in TrackCellViewModel(track, artwork: soundCloudService.fetchArtwork(path: track.artwork)) } }
+      .map { tracks in tracks.map { track -> SearchCellViewModelType in SearchCellViewModel(track, artwork: soundCloudService.fetchArtwork(path: track.artwork)) } }
   }
 
 }

@@ -2,21 +2,29 @@
 import UIKit
 import RxSwift
 
-class TrackCell: UITableViewCell {
+final class SearchCell: UITableViewCell {
+
+  // MARK: - IBOutlets
 
   @IBOutlet private var artworkImageView: UIImageView!
   @IBOutlet private var titleLabel: UILabel!
   @IBOutlet private var durationLabel: UILabel!
   @IBOutlet private var usernameLabel: UILabel!
 
+  // MARK: - Properties
+
   private var disposeBag = DisposeBag()
+
+  // MARK: - UITableViewCell
 
   override func prepareForReuse() {
     disposeBag = DisposeBag()
     artworkImageView.alpha = 0
   }
 
-  func bind(to viewModel: TrackCellViewModelType) {
+  // MARK: - Binding
+
+  func bind(to viewModel: SearchCellViewModelType) {
 
     viewModel.output.title
       .bind(to: titleLabel.rx.text)
@@ -27,7 +35,7 @@ class TrackCell: UITableViewCell {
       .disposed(by: disposeBag)
 
     viewModel.output.duration
-      .map { duration -> String in String(format: "%02i:%02i", ((duration / 1000) / 60 % 60), (duration / 1000) % 60) }
+      .map { duration in String(milliseconds: duration) }
       .bind(to: durationLabel.rx.text)
       .disposed(by: disposeBag)
 

@@ -32,15 +32,16 @@
 		844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; };
 		844EB4BB21FF2884003F6CBE /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* TrackCell.swift */; };
-		844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* TrackCell.xib */; };
+		844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* SearchCell.swift */; };
+		844EB4BF21FF320A003F6CBE /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* SearchCell.xib */; };
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
-		8491FE16220054930077D92C /* TrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* TrackCellViewModel.swift */; };
+		8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* SearchCellViewModel.swift */; };
 		8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE182201B6270077D92C /* HTTPRequest.swift */; };
 		8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1A2201B6630077D92C /* HTTPResponse.swift */; };
 		8491FE1D2201CE670077D92C /* HTTPClient+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */; };
 		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
 		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
+		84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD9B2205DD600063A554 /* String+Formatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,15 +107,16 @@
 		84148CA521FE19B8003CD070 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		844EB4B521FF286B003F6CBE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		844EB4B921FF2884003F6CBE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		844EB4BC21FF320A003F6CBE /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
-		844EB4BD21FF320A003F6CBE /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		844EB4BC21FF320A003F6CBE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		844EB4BD21FF320A003F6CBE /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		8491FE15220054930077D92C /* TrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellViewModel.swift; sourceTree = "<group>"; };
+		8491FE15220054930077D92C /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
 		8491FE182201B6270077D92C /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		8491FE1A2201B6630077D92C /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Reactive.swift"; sourceTree = "<group>"; };
 		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
 		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
+		84EABD9B2205DD600063A554 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,12 +232,12 @@
 		84148C3321F9FD4E003CD070 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				844EB4BC21FF320A003F6CBE /* SearchCell.swift */,
+				844EB4BD21FF320A003F6CBE /* SearchCell.xib */,
+				8491FE15220054930077D92C /* SearchCellViewModel.swift */,
 				84148C3921F9FDA4003CD070 /* SearchViewController.swift */,
 				84148C3A21F9FDA5003CD070 /* SearchViewController.xib */,
 				844EB4C021FF3987003F6CBE /* SearchViewModel.swift */,
-				844EB4BC21FF320A003F6CBE /* TrackCell.swift */,
-				844EB4BD21FF320A003F6CBE /* TrackCell.xib */,
-				8491FE15220054930077D92C /* TrackCellViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				8491FE1C2201CE670077D92C /* HTTPClient+Reactive.swift */,
+				84EABD9B2205DD600063A554 /* String+Formatting.swift */,
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
 				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
@@ -415,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */,
-				844EB4BF21FF320A003F6CBE /* TrackCell.xib in Resources */,
+				844EB4BF21FF320A003F6CBE /* SearchCell.xib in Resources */,
 				84148C0D21F9F083003CD070 /* LaunchScreen.storyboard in Resources */,
 				84148C0A21F9F083003CD070 /* Assets.xcassets in Resources */,
 				84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */,
@@ -443,14 +446,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8491FE16220054930077D92C /* TrackCellViewModel.swift in Sources */,
+				84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */,
+				8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPTargetTask.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
-				844EB4BE21FF320A003F6CBE /* TrackCell.swift in Sources */,
+				844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */,
 				8491FE1D2201CE670077D92C /* HTTPClient+Reactive.swift in Sources */,
 				840157AE220010080034D1A5 /* User.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
