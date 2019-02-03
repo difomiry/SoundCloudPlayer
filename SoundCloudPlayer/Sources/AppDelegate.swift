@@ -7,15 +7,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  private let disposeBag = DisposeBag()
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     window = UIWindow()
 
-    AppCoordinator(window: window!).start()
-      .subscribe()
-      .disposed(by: disposeBag)
+    let provider = ServiceProvider()
+
+    let viewModel = SearchViewModel(soundCloudService: provider.soundCloudService)
+    let viewController = SearchViewController(viewModel: viewModel)
+    let navigationController = UINavigationController(rootViewController: viewController)
+
+    window?.rootViewController = navigationController
+    window?.makeKeyAndVisible()
 
     return true
   }

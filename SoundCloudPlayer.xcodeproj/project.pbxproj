@@ -28,6 +28,8 @@
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 		84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA121FE1271003CD070 /* SoundCloudService.swift */; };
 		84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA521FE19B8003CD070 /* ServiceProvider.swift */; };
+		844D3DF1220714F70072A42D /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF0220714F70072A42D /* RouterType.swift */; };
+		844D3DF3220715630072A42D /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF2220715630072A42D /* SearchRouter.swift */; };
 		844EB4B621FF286B003F6CBE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; };
 		844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; };
@@ -42,9 +44,6 @@
 		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
 		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
 		84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD9B2205DD600063A554 /* String+Formatting.swift */; };
-		84EABDA42205E69D0063A554 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDA32205E69D0063A554 /* AppCoordinator.swift */; };
-		84EABDA82205E9450063A554 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDA72205E9450063A554 /* Coordinator.swift */; };
-		84EABDAA2205EAC20063A554 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDA92205EAC20063A554 /* SearchCoordinator.swift */; };
 		84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDAB220607690063A554 /* Data+Decodable.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +108,8 @@
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84148CA121FE1271003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148CA521FE19B8003CD070 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		844D3DF0220714F70072A42D /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		844D3DF2220715630072A42D /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		844EB4B521FF286B003F6CBE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		844EB4B921FF2884003F6CBE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		844EB4BC21FF320A003F6CBE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -121,9 +122,6 @@
 		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
 		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
 		84EABD9B2205DD600063A554 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
-		84EABDA32205E69D0063A554 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		84EABDA72205E9450063A554 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		84EABDA92205EAC20063A554 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		84EABDAB220607690063A554 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,7 +220,6 @@
 				84148C9121FDDBA5003CD070 /* Services */,
 				84148C4921FB68A8003CD070 /* Utilities */,
 				84148C9421FDDEB7003CD070 /* AppConstants.swift */,
-				84EABDA32205E69D0063A554 /* AppCoordinator.swift */,
 				84148C0221F9F081003CD070 /* AppDelegate.swift */,
 				84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */,
 			);
@@ -232,8 +229,8 @@
 		84148C3221F9FD3E003CD070 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				84148C3421F9FD54003CD070 /* Track */,
 				84148C3321F9FD4E003CD070 /* Search */,
+				84148C3421F9FD54003CD070 /* Track */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -244,7 +241,7 @@
 				844EB4BC21FF320A003F6CBE /* SearchCell.swift */,
 				844EB4BD21FF320A003F6CBE /* SearchCell.xib */,
 				8491FE15220054930077D92C /* SearchCellViewModel.swift */,
-				84EABDA92205EAC20063A554 /* SearchCoordinator.swift */,
+				844D3DF2220715630072A42D /* SearchRouter.swift */,
 				84148C3921F9FDA4003CD070 /* SearchViewController.swift */,
 				84148C3A21F9FDA5003CD070 /* SearchViewController.xib */,
 				844EB4C021FF3987003F6CBE /* SearchViewModel.swift */,
@@ -265,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				8491FE172201B54F0077D92C /* HTTP */,
-				84EABDA72205E9450063A554 /* Coordinator.swift */,
+				844D3DED220714AD0072A42D /* Protocols */,
 				84148C7921FBA548003CD070 /* Result.swift */,
 			);
 			path = Utilities;
@@ -296,6 +293,14 @@
 				84148CA121FE1271003CD070 /* SoundCloudService.swift */,
 			);
 			path = SoundCloud;
+			sourceTree = "<group>";
+		};
+		844D3DED220714AD0072A42D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				844D3DF0220714F70072A42D /* RouterType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8491FE172201B54F0077D92C /* HTTP */ = {
@@ -460,9 +465,7 @@
 			files = (
 				84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */,
 				8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */,
-				84EABDA82205E9450063A554 /* Coordinator.swift in Sources */,
-				84EABDA42205E69D0063A554 /* AppCoordinator.swift in Sources */,
-				84EABDAA2205EAC20063A554 /* SearchCoordinator.swift in Sources */,
+				844D3DF1220714F70072A42D /* RouterType.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
@@ -483,6 +486,7 @@
 				84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceProvider.swift in Sources */,
 				8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */,
+				844D3DF3220715630072A42D /* SearchRouter.swift in Sources */,
 				84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,

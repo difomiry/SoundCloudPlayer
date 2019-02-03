@@ -12,6 +12,8 @@ final class SearchViewController: UIViewController {
 
   // MARK: - Properties
 
+  private lazy var router = SearchRouter(viewController: self)
+
   private let viewModel: SearchViewModelType
   private let disposeBag = DisposeBag()
 
