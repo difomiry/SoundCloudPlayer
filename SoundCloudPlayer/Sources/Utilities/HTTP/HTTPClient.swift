@@ -3,7 +3,7 @@ import Foundation
 
 typealias HTTPResult = Result<HTTPResponse, HTTPError>
 
-typealias HTTPCompletion = (HTTPResult) ->Void
+typealias HTTPCompletion = (HTTPResult) -> Void
 
 protocol HTTPClientType {
 

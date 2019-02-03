@@ -14,12 +14,12 @@ final class SearchViewController: UIViewController {
 
   private lazy var router = SearchRouter(viewController: self)
 
-  private let viewModel: SearchViewModelType
+  private let viewModel: SearchViewModel
   private let disposeBag = DisposeBag()
 
   // MARK: - Init
 
-  init(viewModel: SearchViewModelType) {
+  init(viewModel: SearchViewModel) {
     self.viewModel = viewModel
     super.init(nibName: "SearchViewController", bundle: nil)
   }
@@ -41,13 +41,11 @@ final class SearchViewController: UIViewController {
 
     tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
 
-    searchBar.rx.text.orEmpty
-      .bind(to: viewModel.input.query)
-      .disposed(by: disposeBag)
+    let output = viewModel.transform(input: SearchViewModel.Input(query: searchBar.rx.text.orEmpty.asObservable()))
 
-    viewModel.output.tracks
+    output.tracks
       .observeOn(MainScheduler.instance)
-      .bind(to: tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModelType, cell) in
+      .bind(to: tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModel, cell) in
         cell.bind(to: track)
       }
       .disposed(by: disposeBag)

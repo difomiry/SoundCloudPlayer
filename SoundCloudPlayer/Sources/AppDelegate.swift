@@ -11,9 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow()
 
-    let provider = ServiceProvider()
-
-    let viewModel = SearchViewModel(soundCloudService: provider.soundCloudService)
+    let viewModel = SearchViewModel()
     let viewController = SearchViewController(viewModel: viewModel)
     let navigationController = UINavigationController(rootViewController: viewController)
 

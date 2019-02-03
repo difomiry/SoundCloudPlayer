@@ -18,28 +18,32 @@ final class SearchCell: UITableViewCell {
   // MARK: - UITableViewCell
 
   override func prepareForReuse() {
+    super.prepareForReuse()
+
     disposeBag = DisposeBag()
     artworkImageView.alpha = 0
   }
 
   // MARK: - Binding
 
-  func bind(to viewModel: SearchCellViewModelType) {
+  func bind(to viewModel: SearchCellViewModel) {
 
-    viewModel.output.title
+    let output = viewModel.transform(input: SearchCellViewModel.Input())
+
+    output.title
       .bind(to: titleLabel.rx.text)
       .disposed(by: disposeBag)
 
-    viewModel.output.username
+    output.username
       .bind(to: usernameLabel.rx.text)
       .disposed(by: disposeBag)
 
-    viewModel.output.duration
+    output.duration
       .map { duration in String(milliseconds: duration) }
       .bind(to: durationLabel.rx.text)
       .disposed(by: disposeBag)
 
-    viewModel.output.artwork
+    output.artwork
       .do(onNext: { _ in UIView.animate(withDuration: 0.1) { [weak self] in self?.artworkImageView.alpha = 1 } })
       .bind(to: artworkImageView.rx.image)
       .disposed(by: disposeBag)
