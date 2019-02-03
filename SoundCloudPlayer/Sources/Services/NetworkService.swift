@@ -1,13 +1,21 @@
 
 import RxSwift
 
-extension HTTPClient: ReactiveCompatible {}
+protocol NetworkServiceType: class {
+  func task<Request: HTTPRequestType>(request: Request) -> Observable<HTTPResponse>
+}
 
-extension Reactive where Base: HTTPClientType {
+final class NetworkService: NetworkServiceType {
+
+  private let httpClient: HTTPClientType
+
+  init(httpClient: HTTPClientType = ServiceLocator.shared.httpClient) {
+    self.httpClient = httpClient
+  }
 
   func task<Request: HTTPRequestType>(request: Request) -> Observable<HTTPResponse> {
     return Observable.create { observer in
-      let task = self.base.task(request: request) { result in
+      let task = self.httpClient.task(request: request) { result in
         switch result {
         case let .success(response):
           observer.on(.next(response))

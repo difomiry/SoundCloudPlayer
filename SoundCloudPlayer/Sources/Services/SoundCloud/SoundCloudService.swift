@@ -11,14 +11,14 @@ protocol SoundCloudServiceType {
 
 final class SoundCloudService: SoundCloudServiceType {
 
-  private let httpClient: HTTPClient
+  private let networkService: NetworkServiceType
 
-  init(httpClient: HTTPClient) {
-    self.httpClient = httpClient
+  init(networkService: NetworkServiceType) {
+    self.networkService = networkService
   }
 
   func search(query: String) -> Observable<[Track]> {
-    return httpClient.rx
+    return networkService
       .task(request: HTTPRequest(target: SoundCloudTarget.search(query: query)))
       .map { response in try response.data.map(type: [Track].self) }
   }
@@ -27,13 +27,13 @@ final class SoundCloudService: SoundCloudServiceType {
     guard let path = path, let url = URL(string: path) else {
       return .just(UIImage(named: "Artwork")!)
     }
-    return httpClient.rx
+    return networkService
       .task(request: HTTPRequest(target: url))
       .map { response in UIImage(data: response.data) ?? UIImage(named: "Artwork")! }
   }
 
   func fetchTrack(id: Int) -> Observable<Track> {
-    return httpClient.rx
+    return networkService
       .task(request: HTTPRequest(target: SoundCloudTarget.track(id: id)))
       .map { response in try response.data.map(type: Track.self) }
   }

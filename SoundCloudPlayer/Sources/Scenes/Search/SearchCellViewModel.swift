@@ -27,11 +27,13 @@ final class SearchCellViewModel: ViewModelType {
   // MARK: - Properties
 
   private let track: Track
+  private let soundCloudService: SoundCloudServiceType
 
   // MARK: - Init
 
-  init(track: Track) {
+  init(track: Track, soundCloudService: SoundCloudServiceType = ServiceLocator.shared.soundCloudService) {
     self.track = track
+    self.soundCloudService = soundCloudService
   }
 
 
@@ -42,7 +44,7 @@ final class SearchCellViewModel: ViewModelType {
       title: Observable.just(track.title),
       username: Observable.just(track.user.username),
       duration: Observable.just(track.duration),
-      artwork: ServiceLocator.shared.soundCloudService.fetchArtwork(path: track.artwork))
+      artwork: soundCloudService.fetchArtwork(path: track.artwork))
   }
 
 }

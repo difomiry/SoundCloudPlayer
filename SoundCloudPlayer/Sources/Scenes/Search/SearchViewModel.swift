@@ -19,6 +19,16 @@ final class SearchViewModel: ViewModelType {
 
   }
 
+  // MARK: - Properties
+
+  private let soundCloudService: SoundCloudServiceType
+
+  // MARK: - Init
+
+  init(soundCloudService: SoundCloudServiceType = ServiceLocator.shared.soundCloudService) {
+    self.soundCloudService = soundCloudService
+  }
+
   // MARK: - ViewModelType
 
   func transform(input: Input) -> Output {
@@ -27,9 +37,9 @@ final class SearchViewModel: ViewModelType {
       .distinctUntilChanged()
       .flatMapLatest { query -> Observable<[Track]> in
         if query.isEmpty { return .just([]) }
-        return ServiceLocator.shared.soundCloudService.search(query: query).catchErrorJustReturn([])
+        return self.soundCloudService.search(query: query).catchErrorJustReturn([])
       }
-      .map { tracks in tracks.map(SearchCellViewModel.init) })
+      .map { tracks in tracks.map { track in SearchCellViewModel(track: track) } })
   }
 
 }
