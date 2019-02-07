@@ -2,7 +2,7 @@
 import UIKit
 import RxSwift
 
-final class SearchCell: UITableViewCell {
+final class SearchCell: UITableViewCell, NibReusable {
 
   // MARK: - IBOutlets
 

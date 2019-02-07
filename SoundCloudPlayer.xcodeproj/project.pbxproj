@@ -28,7 +28,6 @@
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 		84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA121FE1271003CD070 /* SoundCloudService.swift */; };
 		84148CA621FE19B8003CD070 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA521FE19B8003CD070 /* ServiceLocator.swift */; };
-		844D3DF1220714F70072A42D /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF0220714F70072A42D /* RouterType.swift */; };
 		844D3DF3220715630072A42D /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF2220715630072A42D /* SearchRouter.swift */; };
 		844D3DF52207170E0072A42D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF42207170E0072A42D /* ViewModelType.swift */; };
 		844D3DFB22071F2D0072A42D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DFA22071F2D0072A42D /* NetworkService.swift */; };
@@ -43,6 +42,12 @@
 		8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE182201B6270077D92C /* HTTPRequest.swift */; };
 		8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1A2201B6630077D92C /* HTTPResponse.swift */; };
 		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
+		84B434FE220C9A700044378C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B434FD220C9A700044378C /* Reusable.swift */; };
+		84B43500220C9A9D0044378C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B434FF220C9A9D0044378C /* NibLoadable.swift */; };
+		84B43502220C9AC20044378C /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43501220C9AC20044378C /* NibReusable.swift */; };
+		84B43506220C9B080044378C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43505220C9B080044378C /* UITableView+Reusable.swift */; };
+		84B43508220C9B7A0044378C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43507220C9B7A0044378C /* ViewController.swift */; };
+		84B4350A220C9C760044378C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43509220C9C760044378C /* Router.swift */; };
 		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
 		84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD9B2205DD600063A554 /* String+Formatting.swift */; };
 		84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDAB220607690063A554 /* Data+Decodable.swift */; };
@@ -109,7 +114,6 @@
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84148CA121FE1271003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148CA521FE19B8003CD070 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		844D3DF0220714F70072A42D /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		844D3DF2220715630072A42D /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		844D3DF42207170E0072A42D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		844D3DFA22071F2D0072A42D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -122,6 +126,12 @@
 		8491FE182201B6270077D92C /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		8491FE1A2201B6630077D92C /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
+		84B434FD220C9A700044378C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		84B434FF220C9A9D0044378C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		84B43501220C9AC20044378C /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
+		84B43505220C9B080044378C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		84B43507220C9B7A0044378C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84B43509220C9C760044378C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
 		84EABD9B2205DD600063A554 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		84EABDAB220607690063A554 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
@@ -265,7 +275,12 @@
 			children = (
 				8491FE172201B54F0077D92C /* HTTP */,
 				844D3DED220714AD0072A42D /* Protocols */,
+				84B434FF220C9A9D0044378C /* NibLoadable.swift */,
+				84B43501220C9AC20044378C /* NibReusable.swift */,
 				84148C7921FBA548003CD070 /* Result.swift */,
+				84B434FD220C9A700044378C /* Reusable.swift */,
+				84B43509220C9C760044378C /* Router.swift */,
+				84B43507220C9B7A0044378C /* ViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -301,7 +316,6 @@
 		844D3DED220714AD0072A42D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				844D3DF0220714F70072A42D /* RouterType.swift */,
 				844D3DF42207170E0072A42D /* ViewModelType.swift */,
 			);
 			path = Protocols;
@@ -326,6 +340,7 @@
 			children = (
 				84EABDAB220607690063A554 /* Data+Decodable.swift */,
 				84EABD9B2205DD600063A554 /* String+Formatting.swift */,
+				84B43505220C9B080044378C /* UITableView+Reusable.swift */,
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
 				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
@@ -468,23 +483,26 @@
 			files = (
 				84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */,
 				8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */,
-				844D3DF1220714F70072A42D /* RouterType.swift in Sources */,
+				84B43500220C9A9D0044378C /* NibLoadable.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPTargetTask.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
+				84B4350A220C9C760044378C /* Router.swift in Sources */,
 				844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */,
 				840157AE220010080034D1A5 /* User.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
 				84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */,
 				84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */,
+				84B43508220C9B7A0044378C /* ViewController.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
 				8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */,
 				84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */,
 				8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */,
 				84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */,
+				84B43506220C9B080044378C /* UITableView+Reusable.swift in Sources */,
 				844D3DF52207170E0072A42D /* ViewModelType.swift in Sources */,
 				84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceLocator.swift in Sources */,
@@ -492,6 +510,8 @@
 				844D3DF3220715630072A42D /* SearchRouter.swift in Sources */,
 				84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */,
 				844D3DFB22071F2D0072A42D /* NetworkService.swift in Sources */,
+				84B434FE220C9A700044378C /* Reusable.swift in Sources */,
+				84B43502220C9AC20044378C /* NibReusable.swift in Sources */,
 				84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);

@@ -1,0 +1,2 @@
+
+typealias NibReusable = Reusable & NibLoadable

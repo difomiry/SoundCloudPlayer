@@ -3,35 +3,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: ViewController<SearchViewModel, SearchRouter> {
 
   // MARK: - IBOutlets
 
   @IBOutlet private var searchBar: UISearchBar!
   @IBOutlet private var tableView: UITableView!
 
-  // MARK: - Properties
-
-  private lazy var router = SearchRouter(viewController: self)
-
-  private let viewModel: SearchViewModel
-  private let disposeBag = DisposeBag()
-
-  // MARK: - Init
-
-  init(viewModel: SearchViewModel) {
-    self.viewModel = viewModel
-    super.init(nibName: "SearchViewController", bundle: nil)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-
-  // MARK: - UIViewController
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func setupViews() {
 
     navigationController?.isNavigationBarHidden = true
 
@@ -39,7 +18,10 @@ final class SearchViewController: UIViewController {
     tableView.rowHeight = 60
     tableView.tableFooterView = UIView()
 
-    tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
+    tableView.register(SearchCell.self)
+  }
+
+  override func setupBindings() {
 
     let output = viewModel.transform(.init(query: searchBar.rx.text.orEmpty.asObservable()))
 
