@@ -1,8 +1,12 @@
 
 enum AppConstants {
 
-  static let soundCloudApiPath = "https://api.soundcloud.com/"
-  static let soundCloudApiKey = "xkpqYPmDf6KG7aL1xM4qfWaJQrHBLSOh"
-  static let soundCloudApiSearchLimit = 50
+  enum API {
+
+    static let path = "https://api.soundcloud.com/"
+    static let key = "xkpqYPmDf6KG7aL1xM4qfWaJQrHBLSOh"
+    static let searchLimit = 50
+
+  }
 
 }

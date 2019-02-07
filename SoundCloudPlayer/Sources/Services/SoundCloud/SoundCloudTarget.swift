@@ -10,7 +10,7 @@ enum SoundCloudTarget {
 extension SoundCloudTarget: HTTPTargetType {
   
   var baseURL: URL {
-    return URL(string: AppConstants.soundCloudApiPath)!
+    return URL(string: AppConstants.API.path)!
   }
 
   var path: String? {
@@ -26,11 +26,11 @@ extension SoundCloudTarget: HTTPTargetType {
 
   var task: HTTPTargetTask? {
 
-    var parameters = ["client_id": AppConstants.soundCloudApiKey]
+    var parameters = ["client_id": AppConstants.API.key]
 
     switch self {
     case let .search(query):
-      parameters["limit"] = String(AppConstants.soundCloudApiSearchLimit)
+      parameters["limit"] = String(AppConstants.API.searchLimit)
       parameters["q"] = query
     default:
       break
