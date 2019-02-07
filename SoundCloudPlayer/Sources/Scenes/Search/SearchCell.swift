@@ -2,7 +2,7 @@
 import UIKit
 import RxSwift
 
-final class SearchCell: UITableViewCell, NibReusable {
+final class SearchCell: Cell<SearchCellViewModel> {
 
   // MARK: - IBOutlets
 
@@ -11,22 +11,17 @@ final class SearchCell: UITableViewCell, NibReusable {
   @IBOutlet private var durationLabel: UILabel!
   @IBOutlet private var usernameLabel: UILabel!
 
-  // MARK: - Properties
-
-  private var disposeBag = DisposeBag()
-
   // MARK: - UITableViewCell
 
   override func prepareForReuse() {
     super.prepareForReuse()
 
-    disposeBag = DisposeBag()
     artworkImageView.alpha = 0
   }
 
   // MARK: - Binding
 
-  func bind(to viewModel: SearchCellViewModel) {
+  override func bind(to viewModel: SearchCellViewModel) {
 
     let output = viewModel.transform(.init())
 

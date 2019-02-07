@@ -48,6 +48,7 @@
 		84B43506220C9B080044378C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43505220C9B080044378C /* UITableView+Reusable.swift */; };
 		84B43508220C9B7A0044378C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43507220C9B7A0044378C /* ViewController.swift */; };
 		84B4350A220C9C760044378C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43509220C9C760044378C /* Router.swift */; };
+		84B4350C220CA3780044378C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4350B220CA3780044378C /* Cell.swift */; };
 		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
 		84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD9B2205DD600063A554 /* String+Formatting.swift */; };
 		84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDAB220607690063A554 /* Data+Decodable.swift */; };
@@ -132,6 +133,7 @@
 		84B43505220C9B080044378C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		84B43507220C9B7A0044378C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84B43509220C9C760044378C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		84B4350B220CA3780044378C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
 		84EABD9B2205DD600063A554 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		84EABDAB220607690063A554 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				8491FE172201B54F0077D92C /* HTTP */,
 				844D3DED220714AD0072A42D /* Protocols */,
+				84B4350B220CA3780044378C /* Cell.swift */,
 				84B434FF220C9A9D0044378C /* NibLoadable.swift */,
 				84B43501220C9AC20044378C /* NibReusable.swift */,
 				84148C7921FBA548003CD070 /* Result.swift */,
@@ -486,6 +489,7 @@
 				84B43500220C9A9D0044378C /* NibLoadable.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
+				84B4350C220CA3780044378C /* Cell.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C8421FBCC6D003CD070 /* HTTPTargetTask.swift in Sources */,
