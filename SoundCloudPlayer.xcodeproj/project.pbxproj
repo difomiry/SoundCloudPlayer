@@ -307,8 +307,8 @@
 		84148CA021FE11A3003CD070 /* SoundCloud */ = {
 			isa = PBXGroup;
 			children = (
-				84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */,
 				84148CA121FE1271003CD070 /* SoundCloudService.swift */,
+				84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */,
 			);
 			path = SoundCloud;
 			sourceTree = "<group>";
