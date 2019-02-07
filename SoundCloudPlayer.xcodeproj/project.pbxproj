@@ -278,10 +278,7 @@
 				8491FE172201B54F0077D92C /* HTTP */,
 				844D3DED220714AD0072A42D /* Protocols */,
 				84B4350B220CA3780044378C /* Cell.swift */,
-				84B434FF220C9A9D0044378C /* NibLoadable.swift */,
-				84B43501220C9AC20044378C /* NibReusable.swift */,
 				84148C7921FBA548003CD070 /* Result.swift */,
-				84B434FD220C9A700044378C /* Reusable.swift */,
 				84B43509220C9C760044378C /* Router.swift */,
 				84B43507220C9B7A0044378C /* ViewController.swift */,
 			);
@@ -319,6 +316,9 @@
 		844D3DED220714AD0072A42D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				84B434FF220C9A9D0044378C /* NibLoadable.swift */,
+				84B43501220C9AC20044378C /* NibReusable.swift */,
+				84B434FD220C9A700044378C /* Reusable.swift */,
 				844D3DF42207170E0072A42D /* ViewModelType.swift */,
 			);
 			path = Protocols;

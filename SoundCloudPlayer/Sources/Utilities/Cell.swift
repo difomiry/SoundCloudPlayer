@@ -9,11 +9,10 @@ protocol CellType: class {
   /// The disposeBag for children.
   var disposeBag: DisposeBag { get }
 
-  /// Binds viewModel to this cell.
+  /// Binds the viewModel to this cell.
   func bind(to viewModel: ViewModel)
 
 }
-
 
 class Cell<ViewModel: ViewModelType>: UITableViewCell, CellType, NibReusable {
 
@@ -26,6 +25,7 @@ class Cell<ViewModel: ViewModelType>: UITableViewCell, CellType, NibReusable {
     disposeBag = DisposeBag()
   }
 
+  /// Binds the viewModel to this cell.
   func bind(to viewModel: ViewModel) {
     fatalError("`bind` method should be implemented.")
   }
