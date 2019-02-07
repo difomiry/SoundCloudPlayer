@@ -31,7 +31,7 @@ final class SearchViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
-  func transform(input: Input) -> Output {
+  func transform(_ input: Input) -> Output {
     return Output(tracks: input.query
       .throttle(0.5, scheduler: MainScheduler.instance)
       .distinctUntilChanged()

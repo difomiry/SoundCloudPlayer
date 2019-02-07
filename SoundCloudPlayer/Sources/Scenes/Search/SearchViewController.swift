@@ -41,7 +41,7 @@ final class SearchViewController: UIViewController {
 
     tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
 
-    let output = viewModel.transform(input: SearchViewModel.Input(query: searchBar.rx.text.orEmpty.asObservable()))
+    let output = viewModel.transform(.init(query: searchBar.rx.text.orEmpty.asObservable()))
 
     output.tracks
       .observeOn(MainScheduler.instance)

@@ -10,16 +10,10 @@ final class SearchCellViewModel: ViewModelType {
 
   struct Output {
 
-    /// Emits the track title.
-    let title: Observable<String>
+    /// Emits the track.
+    let track: Observable<Track>
 
-    /// Emits the track author.
-    let username: Observable<String>
-
-    /// Emits the track duration.
-    let duration: Observable<Int>
-
-    /// Emits the track artwork.
+    /// Emits the artwork of track.
     let artwork: Observable<UIImage>
 
   }
@@ -39,11 +33,9 @@ final class SearchCellViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
-  func transform(input: Input) -> Output {
+  func transform(_ input: Input) -> Output {
     return Output(
-      title: Observable.just(track.title),
-      username: Observable.just(track.user.username),
-      duration: Observable.just(track.duration),
+      track: Observable.just(track),
       artwork: soundCloudService.fetchArtwork(path: track.artwork))
   }
 

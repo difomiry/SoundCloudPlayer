@@ -28,17 +28,20 @@ final class SearchCell: UITableViewCell {
 
   func bind(to viewModel: SearchCellViewModel) {
 
-    let output = viewModel.transform(input: SearchCellViewModel.Input())
+    let output = viewModel.transform(.init())
 
-    output.title
+    output.track
+      .map { track in track.title }
       .bind(to: titleLabel.rx.text)
       .disposed(by: disposeBag)
 
-    output.username
+    output.track
+      .map { track in track.user.username }
       .bind(to: usernameLabel.rx.text)
       .disposed(by: disposeBag)
 
-    output.duration
+    output.track
+      .map { track in track.duration }
       .map { duration in String(milliseconds: duration) }
       .bind(to: durationLabel.rx.text)
       .disposed(by: disposeBag)
