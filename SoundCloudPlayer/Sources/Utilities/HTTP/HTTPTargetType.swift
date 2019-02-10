@@ -5,8 +5,9 @@ protocol HTTPTargetType {
   var baseURL: URL { get }
   var path: String? { get }
   var method: HTTPMethod { get }
+  var parameters: [String: String]? { get }
+  var body: Data? { get }
   var headers: [String: String]? { get }
-  var task: HTTPTargetTask? { get }
 }
 
 extension HTTPTargetType {
@@ -19,11 +20,15 @@ extension HTTPTargetType {
     return .get
   }
 
-  var headers: [String: String]? {
+  var parameters: [String: String]? {
     return nil
   }
 
-  var task: HTTPTargetTask? {
+  var body: Data? {
+    return nil
+  }
+
+  var headers: [String: String]? {
     return nil
   }
 

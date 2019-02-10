@@ -2,20 +2,15 @@
 import UIKit
 import RxSwift
 
-final class SearchCellViewModel: ViewModelType {
+final class SearchCellViewModel: ViewModel<SearchCellViewModel.Input, SearchCellViewModel.Output> {
 
   // MARK: - ViewModelType
 
   struct Input {}
 
   struct Output {
-
-    /// Emits the track.
     let track: Observable<Track>
-
-    /// Emits the artwork of track.
     let artwork: Observable<UIImage>
-
   }
 
   // MARK: - Properties
@@ -33,7 +28,7 @@ final class SearchCellViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
-  func transform(_ input: Input) -> Output {
+  override func fetchOutput(_ input: Input? = nil) -> Output {
     return Output(
       track: Observable.just(track),
       artwork: soundCloudService.fetchArtwork(path: track.artwork))

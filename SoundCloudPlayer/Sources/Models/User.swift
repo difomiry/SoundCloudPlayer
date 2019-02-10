@@ -6,11 +6,9 @@ struct User: Codable {
   let username: String
 
   enum CodingKeys: String, CodingKey {
-
     case id
     case avatar = "avatar_url"
     case username
-
   }
 
 }

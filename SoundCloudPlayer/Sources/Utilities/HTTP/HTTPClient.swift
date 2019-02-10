@@ -6,14 +6,12 @@ typealias HTTPResult = Result<HTTPResponse, HTTPError>
 typealias HTTPCompletion = (HTTPResult) -> Void
 
 protocol HTTPClientType {
-
-  init(session: URLSession, queue: DispatchQueue)
-
-  func task<Request: HTTPRequestType>(request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask?
-
+  func request<Request: HTTPRequestType>(_ request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask?
 }
 
 class HTTPClient: HTTPClientType {
+
+  static let `default` = HTTPClient()
 
   private let session: URLSession
   private let queue: DispatchQueue
@@ -23,7 +21,8 @@ class HTTPClient: HTTPClientType {
     self.queue = queue
   }
 
-  func task<Request: HTTPRequestType>(request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask? {
+  @discardableResult
+  func request<Request: HTTPRequestType>(_ request: Request, completion: @escaping HTTPCompletion) -> URLSessionDataTask? {
 
     func _completion(result: HTTPResult) {
       self.queue.async {
@@ -34,7 +33,7 @@ class HTTPClient: HTTPClientType {
     let urlRequest: URLRequest
 
     do {
-      urlRequest = try request.request()
+      urlRequest = try request.buildURLRequest()
     } catch {
       _completion(result: .failure(HTTPError.invalidRequest))
       return nil

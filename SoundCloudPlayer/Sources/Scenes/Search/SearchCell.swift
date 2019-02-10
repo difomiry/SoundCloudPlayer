@@ -23,7 +23,7 @@ final class SearchCell: Cell<SearchCellViewModel> {
 
   override func bind(to viewModel: SearchCellViewModel) {
 
-    let output = viewModel.transform(.init())
+    let output = viewModel.fetchOutput()
 
     output.track
       .map { track in track.title }

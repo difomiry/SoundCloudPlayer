@@ -2,25 +2,19 @@
 import Foundation
 
 protocol HTTPRequestType {
-
-  associatedtype Target: HTTPTargetType
-
-  init(target: Target)
-
-  func url() throws -> URL
-  func request() throws -> URLRequest
-
+  func buildURL() throws -> URL
+  func buildURLRequest() throws -> URLRequest
 }
 
 class HTTPRequest<Target: HTTPTargetType>: HTTPRequestType {
 
   private let target: Target
 
-  required init(target: Target) {
+  required init(_ target: Target) {
     self.target = target
   }
 
-  func url() throws -> URL {
+  func buildURL() throws -> URL {
 
     var _url = target.baseURL
 
@@ -32,7 +26,7 @@ class HTTPRequest<Target: HTTPTargetType>: HTTPRequestType {
       throw HTTPError.invalidRequest
     }
 
-    if case let .url(parameters)? = target.task {
+    if let parameters = target.parameters {
       urlComponents.queryItems = parameters.map { (key, value) -> URLQueryItem in
         return URLQueryItem(name: key, value: value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
       }
@@ -45,12 +39,12 @@ class HTTPRequest<Target: HTTPTargetType>: HTTPRequestType {
     return url
   }
 
-  func request() throws -> URLRequest {
+  func buildURLRequest() throws -> URLRequest {
 
-    var urlRequest = URLRequest(url: try url())
+    var urlRequest = URLRequest(url: try buildURL())
 
-    if case let .body(data)? = target.task {
-      urlRequest.httpBody = data
+    if let body = target.body {
+      urlRequest.httpBody = body
     }
 
     target.headers?.forEach { (key, value) in urlRequest.addValue(value, forHTTPHeaderField: key) }

@@ -11,7 +11,6 @@ struct Track: Codable {
   let user: User
 
   enum CodingKeys: String, CodingKey {
-
     case id
     case title
     case genre
@@ -20,7 +19,6 @@ struct Track: Codable {
     case streamable
     case downloadable
     case user
-
   }
 
 }

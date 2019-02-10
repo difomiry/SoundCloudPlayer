@@ -1,22 +1,16 @@
 
 import RxSwift
 
-final class SearchViewModel: ViewModelType {
+final class SearchViewModel: ViewModel<SearchViewModel.Input, SearchViewModel.Output> {
 
   // MARK: - ViewModelType
 
   struct Input {
-
-    /// Call when search query is updated.
     let query: Observable<String>
-
   }
 
   struct Output {
-
-    /// Emits the search results.
     let tracks: Observable<[SearchCellViewModel]>
-
   }
 
   // MARK: - Properties
@@ -31,7 +25,12 @@ final class SearchViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
-  func transform(_ input: Input) -> Output {
+  override func fetchOutput(_ input: Input?) -> Output {
+
+    guard let input = input else {
+      fatalError("`input` should not be nil.")
+    }
+
     return Output(tracks: input.query
       .throttle(0.5, scheduler: MainScheduler.instance)
       .distinctUntilChanged()

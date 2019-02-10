@@ -24,7 +24,7 @@ extension SoundCloudTarget: HTTPTargetType {
     }
   }
 
-  var task: HTTPTargetTask? {
+  var parameters: [String: String]? {
 
     var parameters = ["client_id": AppConstants.SoundCloud.key]
 
@@ -36,7 +36,7 @@ extension SoundCloudTarget: HTTPTargetType {
       break
     }
 
-    return .url(parameters: parameters)
+    return parameters
   }
 
 }

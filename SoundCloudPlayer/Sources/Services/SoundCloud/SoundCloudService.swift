@@ -6,7 +6,7 @@ protocol SoundCloudServiceType {
   func search(query: String) -> Observable<[Track]>
   func fetchArtwork(path: String?) -> Observable<UIImage>
   func fetchTrack(id: Int) -> Observable<Track>
-  func fetchStreamUrl(id: Int) -> Observable<URL>
+  func fetchStreamURL(id: Int) -> Observable<URL>
 }
 
 final class SoundCloudService: SoundCloudServiceType {
@@ -19,7 +19,7 @@ final class SoundCloudService: SoundCloudServiceType {
 
   func search(query: String) -> Observable<[Track]> {
     return networkService
-      .task(request: HTTPRequest(target: SoundCloudTarget.search(query: query)))
+      .request(HTTPRequest(SoundCloudTarget.search(query: query)))
       .map { response in try response.data.map(type: [Track].self) }
   }
 
@@ -28,19 +28,19 @@ final class SoundCloudService: SoundCloudServiceType {
       return .just(UIImage(named: "Artwork")!)
     }
     return networkService
-      .task(request: HTTPRequest(target: url))
+      .request(HTTPRequest(url))
       .map { response in UIImage(data: response.data) ?? UIImage(named: "Artwork")! }
   }
 
   func fetchTrack(id: Int) -> Observable<Track> {
     return networkService
-      .task(request: HTTPRequest(target: SoundCloudTarget.track(id: id)))
+      .request(HTTPRequest(SoundCloudTarget.track(id: id)))
       .map { response in try response.data.map(type: Track.self) }
   }
 
-  func fetchStreamUrl(id: Int) -> Observable<URL> {
+  func fetchStreamURL(id: Int) -> Observable<URL> {
     do {
-      return Observable.just(try HTTPRequest(target: SoundCloudTarget.stream(id: id)).url())
+      return Observable.just(try HTTPRequest(SoundCloudTarget.stream(id: id)).buildURL())
     } catch {
       return Observable.error(error)
     }

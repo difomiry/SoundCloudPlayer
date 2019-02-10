@@ -2,7 +2,7 @@
 import RxSwift
 
 protocol NetworkServiceType: class {
-  func task<Request: HTTPRequestType>(request: Request) -> Observable<HTTPResponse>
+  func request<Request: HTTPRequestType>(_ request: Request) -> Observable<HTTPResponse>
 }
 
 final class NetworkService: NetworkServiceType {
@@ -13,9 +13,9 @@ final class NetworkService: NetworkServiceType {
     self.httpClient = httpClient
   }
 
-  func task<Request: HTTPRequestType>(request: Request) -> Observable<HTTPResponse> {
+  func request<Request: HTTPRequestType>(_ request: Request) -> Observable<HTTPResponse> {
     return Observable.create { observer in
-      let task = self.httpClient.task(request: request) { result in
+      let task = self.httpClient.request(request) { result in
         switch result {
         case let .success(response):
           observer.on(.next(response))

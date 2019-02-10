@@ -23,7 +23,7 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
   override func setupBindings() {
 
-    let output = viewModel.transform(.init(query: searchBar.rx.text.orEmpty.asObservable()))
+    let output = viewModel.fetchOutput(.init(query: searchBar.rx.text.orEmpty.asObservable()))
 
     output.tracks
       .observeOn(MainScheduler.instance)

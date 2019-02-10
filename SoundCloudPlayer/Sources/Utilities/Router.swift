@@ -11,9 +11,7 @@ protocol RouterType: class {
 
 }
 
-class Router: RouterType {
-
-  enum Route {}
+class Router<Route>: RouterType {
 
   let viewController: UIViewController
 
