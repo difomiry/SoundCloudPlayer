@@ -1,7 +1,7 @@
 
 import RxSwift
 
-final class SearchViewModel: ViewModel<SearchViewModel.Input, SearchViewModel.Output> {
+final class SearchViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
@@ -25,7 +25,7 @@ final class SearchViewModel: ViewModel<SearchViewModel.Input, SearchViewModel.Ou
 
   // MARK: - ViewModelType
 
-  override func fetchOutput(_ input: Input?) -> Output {
+  func fetchOutput(_ input: Input?) -> Output {
 
     guard let input = input else {
       fatalError("`input` should not be nil.")

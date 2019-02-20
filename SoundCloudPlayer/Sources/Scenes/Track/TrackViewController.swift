@@ -2,7 +2,7 @@
 import UIKit
 import RxSwift
 
-final class TrackViewModel: ViewModel<TrackViewModel.Input, TrackViewModel.Output> {
+final class TrackViewModel: ViewModelType {
 
   struct Input {}
 
@@ -20,7 +20,7 @@ final class TrackViewModel: ViewModel<TrackViewModel.Input, TrackViewModel.Outpu
     self.viewModel = viewModel
   }
 
-  override func fetchOutput(_ input: Input? = nil) -> Output {
+  func fetchOutput(_ input: Input? = nil) -> Output {
 
     let output = viewModel.fetchOutput()
 

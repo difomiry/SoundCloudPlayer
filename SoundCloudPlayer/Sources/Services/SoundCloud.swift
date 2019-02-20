@@ -1,16 +1,16 @@
 
-import Foundation
+import Net
 
-enum SoundCloudTarget {
+enum SoundCloud {
   case track(id: Int)
   case stream(id: Int)
   case search(query: String)
 }
 
-extension SoundCloudTarget: HTTPTargetType {
+extension SoundCloud: TargetType {
   
-  var baseURL: URL {
-    return URL(string: AppConstants.SoundCloud.path)!
+  var baseURLString: String {
+    return AppConstants.SoundCloud.path
   }
 
   var path: String? {
@@ -24,19 +24,23 @@ extension SoundCloudTarget: HTTPTargetType {
     }
   }
 
-  var parameters: [String: String]? {
+  var parameters: Parameters? {
 
-    var parameters = ["client_id": AppConstants.SoundCloud.key]
+    var parameters: Parameters = [:]
 
     switch self {
     case let .search(query):
-      parameters["limit"] = String(AppConstants.SoundCloud.searchLimit)
+      parameters["limit"] = AppConstants.SoundCloud.searchLimit
       parameters["q"] = query
     default:
       break
     }
 
     return parameters
+  }
+
+  var credentials: Credentials? {
+    return .apiKey("client_id", AppConstants.SoundCloud.key)
   }
 
 }

@@ -19,16 +19,11 @@
 		84148C3C21F9FDA5003CD070 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84148C3A21F9FDA5003CD070 /* SearchViewController.xib */; };
 		84148C7821FB9CEF003CD070 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7721FB9CEF003CD070 /* Track.swift */; };
 		84148C7A21FBA548003CD070 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7921FBA548003CD070 /* Result.swift */; };
-		84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */; };
-		84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */; };
-		84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8521FBD43E003CD070 /* HTTPError.swift */; };
-		84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C8721FBE383003CD070 /* HTTPClient.swift */; };
-		84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */; };
+		84148C9321FDDBCD003CD070 /* SoundCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9221FDDBCD003CD070 /* SoundCloud.swift */; };
 		84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148C9421FDDEB7003CD070 /* AppConstants.swift */; };
 		84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA121FE1271003CD070 /* SoundCloudService.swift */; };
 		84148CA621FE19B8003CD070 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148CA521FE19B8003CD070 /* ServiceLocator.swift */; };
 		844D3DF3220715630072A42D /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DF2220715630072A42D /* SearchRouter.swift */; };
-		844D3DFB22071F2D0072A42D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D3DFA22071F2D0072A42D /* NetworkService.swift */; };
 		844EB4B621FF286B003F6CBE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; };
 		844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B521FF286B003F6CBE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EB4B921FF2884003F6CBE /* RxCocoa.framework */; };
@@ -36,11 +31,10 @@
 		844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* SearchCell.swift */; };
 		844EB4BF21FF320A003F6CBE /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* SearchCell.xib */; };
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
-		84872DA92210688B003BC700 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872DA82210688B003BC700 /* ViewModel.swift */; };
+		84872DA92210688B003BC700 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872DA82210688B003BC700 /* ViewModelType.swift */; };
 		8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* SearchCellViewModel.swift */; };
-		8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE182201B6270077D92C /* HTTPRequest.swift */; };
-		8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1A2201B6630077D92C /* HTTPResponse.swift */; };
-		8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */; };
+		84A7A7AF221DECE600DB2C28 /* Net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7A7AE221DECE600DB2C28 /* Net.framework */; };
+		84A7A7B0221DECE600DB2C28 /* Net.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7A7AE221DECE600DB2C28 /* Net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B434FE220C9A700044378C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B434FD220C9A700044378C /* Reusable.swift */; };
 		84B43500220C9A9D0044378C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B434FF220C9A9D0044378C /* NibLoadable.swift */; };
 		84B43502220C9AC20044378C /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B43501220C9AC20044378C /* NibReusable.swift */; };
@@ -50,7 +44,6 @@
 		84B4350C220CA3780044378C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4350B220CA3780044378C /* Cell.swift */; };
 		84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */; };
 		84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD9B2205DD600063A554 /* String+Formatting.swift */; };
-		84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABDAB220607690063A554 /* Data+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +71,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				844EB4BB21FF2884003F6CBE /* RxCocoa.framework in Embed Frameworks */,
+				84A7A7B0221DECE600DB2C28 /* Net.framework in Embed Frameworks */,
 				844EB4B721FF286B003F6CBE /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -102,29 +96,21 @@
 		84148C3621F9FD73003CD070 /* TrackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackViewController.xib; sourceTree = "<group>"; };
 		84148C3921F9FDA4003CD070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		84148C3A21F9FDA5003CD070 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundCloudPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		84148C7721FB9CEF003CD070 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		84148C7921FBA548003CD070 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTargetType.swift; sourceTree = "<group>"; };
-		84148C8521FBD43E003CD070 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
-		84148C8721FBE383003CD070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudTarget.swift; sourceTree = "<group>"; };
+		84148C9221FDDBCD003CD070 /* SoundCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloud.swift; sourceTree = "<group>"; };
 		84148C9421FDDEB7003CD070 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		84148CA121FE1271003CD070 /* SoundCloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudService.swift; sourceTree = "<group>"; };
 		84148CA521FE19B8003CD070 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		844D3DF2220715630072A42D /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
-		844D3DFA22071F2D0072A42D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		844EB4B521FF286B003F6CBE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		844EB4B921FF2884003F6CBE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		844EB4BC21FF320A003F6CBE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		844EB4BD21FF320A003F6CBE /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		84872DA82210688B003BC700 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		84872DA82210688B003BC700 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8491FE15220054930077D92C /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
-		8491FE182201B6270077D92C /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		8491FE1A2201B6630077D92C /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
-		8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+HTTPTargetType.swift"; sourceTree = "<group>"; };
+		84A7A7AE221DECE600DB2C28 /* Net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Net.framework; path = Carthage/Build/iOS/Net.framework; sourceTree = "<group>"; };
 		84B434FD220C9A700044378C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		84B434FF220C9A9D0044378C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		84B43501220C9AC20044378C /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
@@ -134,7 +120,6 @@
 		84B4350B220CA3780044378C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObservableKeyboardHeight.swift"; sourceTree = "<group>"; };
 		84EABD9B2205DD600063A554 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
-		84EABDAB220607690063A554 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844EB4BA21FF2884003F6CBE /* RxCocoa.framework in Frameworks */,
+				84A7A7AF221DECE600DB2C28 /* Net.framework in Frameworks */,
 				844EB4B621FF286B003F6CBE /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,12 +153,11 @@
 		84148BF621F9F081003CD070 = {
 			isa = PBXGroup;
 			children = (
-				844EB4B921FF2884003F6CBE /* RxCocoa.framework */,
-				844EB4B521FF286B003F6CBE /* RxSwift.framework */,
 				84148C0121F9F081003CD070 /* SoundCloudPlayer */,
 				84148C1621F9F083003CD070 /* SoundCloudPlayerTests */,
 				84148C2121F9F083003CD070 /* SoundCloudPlayerUITests */,
 				84148C0021F9F081003CD070 /* Products */,
+				84A7A7B1221DECEC00DB2C28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,8 +174,8 @@
 		84148C0121F9F081003CD070 /* SoundCloudPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				84148C3121F9F848003CD070 /* Sources */,
 				84148C3021F9F827003CD070 /* Resources */,
+				84148C3121F9F848003CD070 /* Sources */,
 				84148C0E21F9F083003CD070 /* Info.plist */,
 			);
 			path = SoundCloudPlayer;
@@ -226,14 +211,12 @@
 		84148C3121F9F848003CD070 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				84C71D39220339250049546F /* Extensions */,
 				84148C7621FB9CB2003CD070 /* Models */,
 				84148C3221F9FD3E003CD070 /* Scenes */,
 				84148C9121FDDBA5003CD070 /* Services */,
 				84148C4921FB68A8003CD070 /* Utilities */,
 				84148C9421FDDEB7003CD070 /* AppConstants.swift */,
 				84148C0221F9F081003CD070 /* AppDelegate.swift */,
-				84148C5D21FB79B7003CD070 /* SoundCloudPlayer-Bridging-Header.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -273,13 +256,10 @@
 		84148C4921FB68A8003CD070 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8491FE172201B54F0077D92C /* HTTP */,
+				84A7A7B2221DED7800DB2C28 /* Classes */,
+				84C71D39220339250049546F /* Extensions */,
 				844D3DED220714AD0072A42D /* Protocols */,
-				84B4350B220CA3780044378C /* Cell.swift */,
 				84148C7921FBA548003CD070 /* Result.swift */,
-				84B43509220C9C760044378C /* Router.swift */,
-				84B43507220C9B7A0044378C /* ViewController.swift */,
-				84872DA82210688B003BC700 /* ViewModel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -296,20 +276,11 @@
 		84148C9121FDDBA5003CD070 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				84148CA021FE11A3003CD070 /* SoundCloud */,
-				844D3DFA22071F2D0072A42D /* NetworkService.swift */,
 				84148CA521FE19B8003CD070 /* ServiceLocator.swift */,
+				84148C9221FDDBCD003CD070 /* SoundCloud.swift */,
+				84148CA121FE1271003CD070 /* SoundCloudService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		84148CA021FE11A3003CD070 /* SoundCloud */ = {
-			isa = PBXGroup;
-			children = (
-				84148CA121FE1271003CD070 /* SoundCloudService.swift */,
-				84148C9221FDDBCD003CD070 /* SoundCloudTarget.swift */,
-			);
-			path = SoundCloud;
 			sourceTree = "<group>";
 		};
 		844D3DED220714AD0072A42D /* Protocols */ = {
@@ -318,31 +289,37 @@
 				84B434FF220C9A9D0044378C /* NibLoadable.swift */,
 				84B43501220C9AC20044378C /* NibReusable.swift */,
 				84B434FD220C9A700044378C /* Reusable.swift */,
+				84872DA82210688B003BC700 /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8491FE172201B54F0077D92C /* HTTP */ = {
+		84A7A7B1221DECEC00DB2C28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84148C8721FBE383003CD070 /* HTTPClient.swift */,
-				84148C8521FBD43E003CD070 /* HTTPError.swift */,
-				84148C7B21FBA6EC003CD070 /* HTTPMethod.swift */,
-				8491FE182201B6270077D92C /* HTTPRequest.swift */,
-				8491FE1A2201B6630077D92C /* HTTPResponse.swift */,
-				84148C7D21FBA79A003CD070 /* HTTPTargetType.swift */,
+				844EB4B521FF286B003F6CBE /* RxSwift.framework */,
+				844EB4B921FF2884003F6CBE /* RxCocoa.framework */,
+				84A7A7AE221DECE600DB2C28 /* Net.framework */,
 			);
-			path = HTTP;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A7A7B2221DED7800DB2C28 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84B4350B220CA3780044378C /* Cell.swift */,
+				84B43509220C9C760044378C /* Router.swift */,
+				84B43507220C9B7A0044378C /* ViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		84C71D39220339250049546F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				84EABDAB220607690063A554 /* Data+Decodable.swift */,
 				84EABD9B2205DD600063A554 /* String+Formatting.swift */,
 				84B43505220C9B080044378C /* UITableView+Reusable.swift */,
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
-				8491FE1E2201D2200077D92C /* URL+HTTPTargetType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,32 +464,23 @@
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				84B4350C220CA3780044378C /* Cell.swift in Sources */,
-				84872DA92210688B003BC700 /* ViewModel.swift in Sources */,
+				84872DA92210688B003BC700 /* ViewModelType.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
-				84148C8821FBE383003CD070 /* HTTPClient.swift in Sources */,
 				84148C7A21FBA548003CD070 /* Result.swift in Sources */,
 				84B4350A220C9C760044378C /* Router.swift in Sources */,
 				844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */,
 				840157AE220010080034D1A5 /* User.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
-				84EABDAC220607690063A554 /* Data+Decodable.swift in Sources */,
-				84148C7C21FBA6EC003CD070 /* HTTPMethod.swift in Sources */,
 				84B43508220C9B7A0044378C /* ViewController.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
-				8491FE1B2201B6630077D92C /* HTTPResponse.swift in Sources */,
-				84148C8621FBD43E003CD070 /* HTTPError.swift in Sources */,
-				8491FE1F2201D2200077D92C /* URL+HTTPTargetType.swift in Sources */,
 				84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */,
 				84B43506220C9B080044378C /* UITableView+Reusable.swift in Sources */,
-				84148C9321FDDBCD003CD070 /* SoundCloudTarget.swift in Sources */,
+				84148C9321FDDBCD003CD070 /* SoundCloud.swift in Sources */,
 				84148CA621FE19B8003CD070 /* ServiceLocator.swift in Sources */,
-				8491FE192201B6270077D92C /* HTTPRequest.swift in Sources */,
 				844D3DF3220715630072A42D /* SearchRouter.swift in Sources */,
 				84C71D3B220339640049546F /* UIViewController+ObservableKeyboardHeight.swift in Sources */,
-				844D3DFB22071F2D0072A42D /* NetworkService.swift in Sources */,
 				84B434FE220C9A700044378C /* Reusable.swift in Sources */,
 				84B43502220C9AC20044378C /* NibReusable.swift in Sources */,
-				84148C7E21FBA79A003CD070 /* HTTPTargetType.swift in Sources */,
 				84148C0321F9F081003CD070 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,7 +585,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -672,7 +640,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -695,7 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.difomiry.SoundCloudPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -718,7 +686,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.difomiry.SoundCloudPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoundCloudPlayer/Sources/SoundCloudPlayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

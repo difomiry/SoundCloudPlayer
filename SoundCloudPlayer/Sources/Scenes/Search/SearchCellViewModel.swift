@@ -2,7 +2,7 @@
 import UIKit
 import RxSwift
 
-final class SearchCellViewModel: ViewModel<SearchCellViewModel.Input, SearchCellViewModel.Output> {
+final class SearchCellViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
@@ -28,7 +28,7 @@ final class SearchCellViewModel: ViewModel<SearchCellViewModel.Input, SearchCell
 
   // MARK: - ViewModelType
 
-  override func fetchOutput(_ input: Input? = nil) -> Output {
+  func fetchOutput(_ input: Input? = nil) -> Output {
     return Output(
       track: Observable.just(track),
       artwork: soundCloudService.fetchArtwork(path: track.artwork))
