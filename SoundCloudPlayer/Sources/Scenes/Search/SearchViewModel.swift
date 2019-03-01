@@ -10,6 +10,7 @@ final class SearchViewModel: ViewModelType {
   }
 
   struct Output {
+    let isLoading: Observable<Bool>
     let tracks: Observable<[SearchCellViewModel]>
   }
 
@@ -31,14 +32,22 @@ final class SearchViewModel: ViewModelType {
       fatalError("`input` should not be nil.")
     }
 
-    return Output(tracks: input.query
+    let _isLoading = BehaviorSubject<Bool>(value: false)
+    let isLoading = _isLoading.asObservable()
+
+    let tracks = input.query
       .throttle(0.5, scheduler: MainScheduler.instance)
       .distinctUntilChanged()
       .flatMapLatest { query -> Observable<[Track]> in
         if query.isEmpty { return .just([]) }
-        return self.soundCloudService.search(query: query).catchErrorJustReturn([])
+        _isLoading.onNext(true)
+        return self.soundCloudService.search(query: query).catchErrorJustReturn([]).do(onNext: { _ in
+          _isLoading.onNext(false)
+        })
       }
-      .map { tracks in tracks.map { track in SearchCellViewModel(track: track) } })
+      .map { tracks in tracks.map { track in SearchCellViewModel(track: track) } }
+
+    return Output(isLoading: isLoading, tracks: tracks)
   }
 
 }

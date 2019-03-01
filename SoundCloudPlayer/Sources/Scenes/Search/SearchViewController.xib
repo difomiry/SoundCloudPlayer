@@ -27,6 +27,7 @@
           <constraints>
             <constraint firstAttribute="height" constant="56" id="xsu-jz-Soc"/>
           </constraints>
+          <color key="barTintColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
           <textInputTraits key="textInputTraits"/>
         </searchBar>
         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x2a-0U-mSU">

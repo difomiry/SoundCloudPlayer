@@ -30,7 +30,11 @@
 		844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4BC21FF320A003F6CBE /* SearchCell.swift */; };
 		844EB4BF21FF320A003F6CBE /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844EB4BD21FF320A003F6CBE /* SearchCell.xib */; };
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
+		845A1A51222855AA00848CAD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */; };
+		845A1A592229634700848CAD /* SearchMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845A1A582229634700848CAD /* SearchMessageView.xib */; };
 		84872DA92210688B003BC700 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872DA82210688B003BC700 /* ViewModelType.swift */; };
+		8490565E2229651D003496F3 /* SearchMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490565D2229651D003496F3 /* SearchMessageView.swift */; };
+		8490566022296EBF003496F3 /* UIView+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */; };
 		8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491FE15220054930077D92C /* SearchCellViewModel.swift */; };
 		84A7A7AF221DECE600DB2C28 /* Net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7A7AE221DECE600DB2C28 /* Net.framework */; };
 		84A7A7B0221DECE600DB2C28 /* Net.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84A7A7AE221DECE600DB2C28 /* Net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -106,7 +110,11 @@
 		844EB4BC21FF320A003F6CBE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		844EB4BD21FF320A003F6CBE /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		845A1A582229634700848CAD /* SearchMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMessageView.xib; sourceTree = "<group>"; };
 		84872DA82210688B003BC700 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		8490565D2229651D003496F3 /* SearchMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMessageView.swift; sourceTree = "<group>"; };
+		8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoadable.swift"; sourceTree = "<group>"; };
 		8491FE15220054930077D92C /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
 		84A7A7AE221DECE600DB2C28 /* Net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Net.framework; path = Carthage/Build/iOS/Net.framework; sourceTree = "<group>"; };
 		84B434FD220C9A700044378C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -234,6 +242,8 @@
 				844EB4BC21FF320A003F6CBE /* SearchCell.swift */,
 				844EB4BD21FF320A003F6CBE /* SearchCell.xib */,
 				8491FE15220054930077D92C /* SearchCellViewModel.swift */,
+				8490565D2229651D003496F3 /* SearchMessageView.swift */,
+				845A1A582229634700848CAD /* SearchMessageView.xib */,
 				844D3DF2220715630072A42D /* SearchRouter.swift */,
 				84148C3921F9FDA4003CD070 /* SearchViewController.swift */,
 				84148C3A21F9FDA5003CD070 /* SearchViewController.xib */,
@@ -317,6 +327,8 @@
 				84EABD9B2205DD600063A554 /* String+Formatting.swift */,
 				84B43505220C9B080044378C /* UITableView+Reusable.swift */,
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
+				845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */,
+				8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845A1A592229634700848CAD /* SearchMessageView.xib in Resources */,
 				84148C3821F9FD73003CD070 /* TrackViewController.xib in Resources */,
 				844EB4BF21FF320A003F6CBE /* SearchCell.xib in Resources */,
 				84148C0D21F9F083003CD070 /* LaunchScreen.storyboard in Resources */,
@@ -455,15 +468,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8490566022296EBF003496F3 /* UIView+NibLoadable.swift in Sources */,
 				84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */,
 				8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */,
 				84B43500220C9A9D0044378C /* NibLoadable.swift in Sources */,
+				8490565E2229651D003496F3 /* SearchMessageView.swift in Sources */,
 				84148C3721F9FD73003CD070 /* TrackViewController.swift in Sources */,
 				84148C9521FDDEB7003CD070 /* AppConstants.swift in Sources */,
 				84B4350C220CA3780044378C /* Cell.swift in Sources */,
 				84872DA92210688B003BC700 /* ViewModelType.swift in Sources */,
 				844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */,
 				84B4350A220C9C760044378C /* Router.swift in Sources */,
+				845A1A51222855AA00848CAD /* UIView+CornerRadius.swift in Sources */,
 				844EB4BE21FF320A003F6CBE /* SearchCell.swift in Sources */,
 				840157AE220010080034D1A5 /* User.swift in Sources */,
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
