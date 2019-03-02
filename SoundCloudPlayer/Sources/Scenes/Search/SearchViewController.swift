@@ -10,8 +10,8 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
   @IBOutlet private var searchBar: UISearchBar!
   @IBOutlet private var tableView: UITableView!
 
-  private var typingView: SearchMessageView!
-  private var notFoundView: SearchMessageView!
+  private var startTypingView: SearchMessageView!
+  private var nothingFoundView: SearchMessageView!
 
   override func setupViews() {
 
@@ -23,28 +23,27 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
     tableView.register(SearchCell.self)
 
-    typingView = SearchMessageView.instantiate()
-    typingView.frame = .init(x: 0, y: 0, width: tableView.frame.width, height: 70)
-    typingView.configure(with: "Start typing to search…")
+    let messageFrame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 70)
 
-    notFoundView = SearchMessageView.instantiate()
-    notFoundView.frame = .init(x: 0, y: 0, width: tableView.frame.width, height: 70)
-    notFoundView.configure(with: "Sorry, we found nothing :(")
+    startTypingView = SearchMessageView.make(frame: messageFrame, with: "Start typing to search…")
+    nothingFoundView = SearchMessageView.make(frame: messageFrame, with: "Sorry, we found nothing :(")
   }
 
   override func setupBindings() {
 
-    let observableQuery = searchBar.rx.text.orEmpty.asObservable()
+    let observableQuery = searchBar.rx.text.orEmpty.asDriver()
+      .throttle(0.5)
+      .distinctUntilChanged()
 
     let output = viewModel.fetchOutput(.init(query: observableQuery))
 
-    Observable.combineLatest(observableQuery, output.isLoading, output.tracks)
-      .subscribe(onNext: { query, isLoading, tracks in
+    Driver.combineLatest(observableQuery, output.isLoading, output.tracks)
+      .drive(onNext: { query, isLoading, tracks in
         switch (query.isEmpty, isLoading, tracks.isEmpty) {
         case (true, _, _):
-          self.tableView.tableFooterView = self.typingView
+          self.tableView.tableFooterView = self.startTypingView
         case (false, false, true):
-          self.tableView.tableFooterView = self.notFoundView
+          self.tableView.tableFooterView = self.nothingFoundView
         default:
           self.tableView.tableFooterView = UIView()
         }
@@ -52,16 +51,14 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
       .disposed(by: disposeBag)
 
     output.tracks
-      .observeOn(MainScheduler.instance)
-      .bind(to: tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModel, cell) in
+      .drive(tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModel, cell) in
         cell.bind(to: track)
       }
       .disposed(by: disposeBag)
 
     keyboardHeight
       .map { height -> UIEdgeInsets in .init(top: 0, left: 0, bottom: height, right: 0) }
-      .observeOn(MainScheduler.instance)
-      .subscribe(onNext: { [weak self] insets in
+      .drive(onNext: { [weak self] insets in
         self?.tableView.contentInset = insets
         self?.tableView.scrollIndicatorInsets = insets
       })

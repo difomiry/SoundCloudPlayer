@@ -1,17 +1,15 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class TrackViewModel: ViewModelType {
 
   struct Input {}
 
   struct Output {
-
-    let track: Observable<Track>
-
-    let artwork: Observable<UIImage>
-
+    let track: Driver<Track>
+    let artwork: Driver<UIImage>
   }
 
   let viewModel: SearchCellViewModel

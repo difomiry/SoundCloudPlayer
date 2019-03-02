@@ -27,23 +27,23 @@ final class SearchCell: Cell<SearchCellViewModel> {
 
     output.track
       .map { track in track.title }
-      .bind(to: titleLabel.rx.text)
+      .drive(titleLabel.rx.text)
       .disposed(by: disposeBag)
 
     output.track
       .map { track in track.user.username }
-      .bind(to: usernameLabel.rx.text)
+      .drive(usernameLabel.rx.text)
       .disposed(by: disposeBag)
 
     output.track
       .map { track in track.duration }
       .map { duration in String(milliseconds: duration) }
-      .bind(to: durationLabel.rx.text)
+      .drive(durationLabel.rx.text)
       .disposed(by: disposeBag)
 
     output.artwork
       .do(onNext: { _ in UIView.animate(withDuration: 0.1) { [weak self] in self?.artworkImageView.alpha = 1 } })
-      .bind(to: artworkImageView.rx.image)
+      .drive(artworkImageView.rx.image)
       .disposed(by: disposeBag)
   }
 

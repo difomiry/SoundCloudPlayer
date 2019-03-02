@@ -1,17 +1,18 @@
 
 import RxSwift
+import RxCocoa
 
 final class SearchViewModel: ViewModelType {
 
   // MARK: - ViewModelType
 
   struct Input {
-    let query: Observable<String>
+    let query: Driver<String>
   }
 
   struct Output {
-    let isLoading: Observable<Bool>
-    let tracks: Observable<[SearchCellViewModel]>
+    let isLoading: Driver<Bool>
+    let tracks: Driver<[SearchCellViewModel]>
   }
 
   // MARK: - Properties
@@ -33,17 +34,15 @@ final class SearchViewModel: ViewModelType {
     }
 
     let _isLoading = BehaviorSubject<Bool>(value: false)
-    let isLoading = _isLoading.asObservable()
+    let isLoading = _isLoading.asDriver(onErrorJustReturn: false)
 
     let tracks = input.query
-      .throttle(0.5, scheduler: MainScheduler.instance)
-      .distinctUntilChanged()
-      .flatMapLatest { query -> Observable<[Track]> in
+      .flatMapLatest { query -> Driver<[Track]> in
         if query.isEmpty { return .just([]) }
         _isLoading.onNext(true)
-        return self.soundCloudService.search(query: query).catchErrorJustReturn([]).do(onNext: { _ in
-          _isLoading.onNext(false)
-        })
+        return self.soundCloudService.search(query: query)
+          .do(onNext: { _ in _isLoading.onNext(false) })
+          .asDriver(onErrorJustReturn: [])
       }
       .map { tracks in tracks.map { track in SearchCellViewModel(track: track) } }
 

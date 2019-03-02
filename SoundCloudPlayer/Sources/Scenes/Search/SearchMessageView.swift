@@ -3,10 +3,13 @@ import UIKit
 
 final class SearchMessageView: UIView, NibLoadable {
 
-  @IBOutlet var messageLabel: UILabel!
+  @IBOutlet private var messageLabel: UILabel!
 
-  func configure(with message: String) {
-    messageLabel.text = message
+  static func make(frame: CGRect, with message: String) -> SearchMessageView {
+    let view = SearchMessageView.instantiate()
+    view.frame = frame
+    view.messageLabel.text = message
+    return view
   }
 
 }

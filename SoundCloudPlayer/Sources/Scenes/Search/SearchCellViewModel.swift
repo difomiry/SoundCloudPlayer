@@ -1,6 +1,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class SearchCellViewModel: ViewModelType {
 
@@ -9,8 +10,8 @@ final class SearchCellViewModel: ViewModelType {
   struct Input {}
 
   struct Output {
-    let track: Observable<Track>
-    let artwork: Observable<UIImage>
+    let track: Driver<Track>
+    let artwork: Driver<UIImage>
   }
 
   // MARK: - Properties
@@ -30,8 +31,8 @@ final class SearchCellViewModel: ViewModelType {
 
   func fetchOutput(_ input: Input? = nil) -> Output {
     return Output(
-      track: Observable.just(track),
-      artwork: soundCloudService.fetchArtwork(path: track.artwork))
+      track: Driver.just(track),
+      artwork: soundCloudService.fetchArtwork(path: track.artwork).asDriver(onErrorJustReturn: UIImage(named: "Artwork")!))
   }
 
 }
