@@ -10,12 +10,13 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
   @IBOutlet private var searchBar: UISearchBar!
   @IBOutlet private var tableView: UITableView!
 
-  private var startTypingView: SearchMessageView!
   private var nothingFoundView: SearchMessageView!
 
   override func setupViews() {
 
-    navigationController?.isNavigationBarHidden = true
+    navigationController?.isNavigationBarHidden = false
+
+    title = "Search"
 
     tableView.separatorInset = .zero
     tableView.rowHeight = 70
@@ -25,7 +26,6 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
     let messageFrame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 70)
 
-    startTypingView = SearchMessageView.make(frame: messageFrame, with: "Start typing to search…")
     nothingFoundView = SearchMessageView.make(frame: messageFrame, with: "Sorry, we found nothing :(")
   }
 
@@ -39,12 +39,9 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
     Driver.combineLatest(observableQuery, output.isLoading, output.tracks)
       .drive(onNext: { query, isLoading, tracks in
-        switch (query.isEmpty, isLoading, tracks.isEmpty) {
-        case (true, _, _):
-          self.tableView.tableFooterView = self.startTypingView
-        case (false, false, true):
+        if !query.isEmpty && !isLoading && tracks.isEmpty {
           self.tableView.tableFooterView = self.nothingFoundView
-        default:
+        } else {
           self.tableView.tableFooterView = UIView()
         }
       })
@@ -54,6 +51,11 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
       .drive(tableView.rx.items(cellIdentifier: "SearchCell", cellType: SearchCell.self)) { (index, track: SearchCellViewModel, cell) in
         cell.bind(to: track)
       }
+      .disposed(by: disposeBag)
+
+    tableView.rx.modelSelected(SearchCellViewModel.self)
+      .asDriver()
+      .drive(onNext: { m in self.router.navigate(to: .track(m)) })
       .disposed(by: disposeBag)
 
     keyboardHeight
