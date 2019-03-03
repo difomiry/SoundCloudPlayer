@@ -3,9 +3,14 @@ import UIKit
 import RxSwift
 import Net
 
+enum ImageSize: String {
+  case large
+  case t500x500
+}
+
 protocol SoundCloudServiceType: class {
   func search(query: String) -> Observable<[Track]>
-  func fetchArtwork(path: String?) -> Observable<UIImage>
+  func fetchArtwork(path: String?, with size: ImageSize) -> Observable<UIImage>
   func fetchTrack(id: Int) -> Observable<Track>
   func fetchStreamURL(id: Int) -> Observable<URL>
 }
@@ -23,8 +28,9 @@ final class SoundCloudService: SoundCloudServiceType {
       .map { response in try response.data.map([Track].self) }
   }
 
-  func fetchArtwork(path: String?) -> Observable<UIImage> {
-    guard let path = path, let url = URL(string: path) else {
+  func fetchArtwork(path: String?, with size: ImageSize) -> Observable<UIImage> {
+    let _path = path?.replacingOccurrences(of: "large", with: size.rawValue)
+    guard let path = _path, let url = URL(string: path) else {
       return .just(UIImage(named: "Artwork")!)
     }
     return request(url)

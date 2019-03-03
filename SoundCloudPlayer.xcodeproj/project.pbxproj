@@ -32,6 +32,8 @@
 		844EB4C121FF3987003F6CBE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EB4C021FF3987003F6CBE /* SearchViewModel.swift */; };
 		845A1A51222855AA00848CAD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */; };
 		845A1A592229634700848CAD /* SearchMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845A1A582229634700848CAD /* SearchMessageView.xib */; };
+		8471C19F222B27680052487C /* AVPlayer+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471C19E222B27680052487C /* AVPlayer+Rx.swift */; };
+		8471C1A1222C34DD0052487C /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471C1A0222C34DD0052487C /* TrackViewModel.swift */; };
 		84872DA92210688B003BC700 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872DA82210688B003BC700 /* ViewModelType.swift */; };
 		8490565E2229651D003496F3 /* SearchMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490565D2229651D003496F3 /* SearchMessageView.swift */; };
 		8490566022296EBF003496F3 /* UIView+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */; };
@@ -112,6 +114,8 @@
 		844EB4C021FF3987003F6CBE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		845A1A582229634700848CAD /* SearchMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMessageView.xib; sourceTree = "<group>"; };
+		8471C19E222B27680052487C /* AVPlayer+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Rx.swift"; sourceTree = "<group>"; };
+		8471C1A0222C34DD0052487C /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		84872DA82210688B003BC700 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8490565D2229651D003496F3 /* SearchMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMessageView.swift; sourceTree = "<group>"; };
 		8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoadable.swift"; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			children = (
 				84148C3521F9FD73003CD070 /* TrackViewController.swift */,
 				84148C3621F9FD73003CD070 /* TrackViewController.xib */,
+				8471C1A0222C34DD0052487C /* TrackViewModel.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				84C71D3A220339640049546F /* UIViewController+ObservableKeyboardHeight.swift */,
 				845A1A50222855AA00848CAD /* UIView+CornerRadius.swift */,
 				8490565F22296EBF003496F3 /* UIView+NibLoadable.swift */,
+				8471C19E222B27680052487C /* AVPlayer+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8471C1A1222C34DD0052487C /* TrackViewModel.swift in Sources */,
 				8490566022296EBF003496F3 /* UIView+NibLoadable.swift in Sources */,
 				84EABD9C2205DD600063A554 /* String+Formatting.swift in Sources */,
 				8491FE16220054930077D92C /* SearchCellViewModel.swift in Sources */,
@@ -485,6 +492,7 @@
 				84148C3B21F9FDA5003CD070 /* SearchViewController.swift in Sources */,
 				84B43508220C9B7A0044378C /* ViewController.swift in Sources */,
 				84148C7821FB9CEF003CD070 /* Track.swift in Sources */,
+				8471C19F222B27680052487C /* AVPlayer+Rx.swift in Sources */,
 				84148CA221FE1271003CD070 /* SoundCloudService.swift in Sources */,
 				84B43506220C9B080044378C /* UITableView+Reusable.swift in Sources */,
 				84148C9321FDDBCD003CD070 /* SoundCloud.swift in Sources */,

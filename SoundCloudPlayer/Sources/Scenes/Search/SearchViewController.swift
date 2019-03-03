@@ -18,7 +18,7 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
     title = "Search"
 
-    tableView.separatorInset = .zero
+    tableView.separatorInset = .init(top: 0, left: 70, bottom: 0, right: 0)
     tableView.rowHeight = 70
     tableView.tableFooterView = UIView()
 
@@ -55,7 +55,7 @@ final class SearchViewController: ViewController<SearchViewModel, SearchRouter> 
 
     tableView.rx.modelSelected(SearchCellViewModel.self)
       .asDriver()
-      .drive(onNext: { m in self.router.navigate(to: .track(m)) })
+      .drive(onNext: { m in self.router.navigate(to: .track(m.track, m.soundCloudService)) })
       .disposed(by: disposeBag)
 
     keyboardHeight

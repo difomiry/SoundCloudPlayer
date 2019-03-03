@@ -2,7 +2,11 @@
 extension String {
 
   init(milliseconds: Int) {
-    self = String(format: "%i:%02i", (milliseconds / 1000) / 60, (milliseconds / 1000) % 60)
+    self = String(seconds: milliseconds / 1000)
+  }
+
+  init(seconds: Int) {
+    self = String(format: "%i:%02i", seconds / 60, seconds % 60)
   }
 
 }
